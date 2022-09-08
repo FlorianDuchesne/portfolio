@@ -40,7 +40,7 @@ class Projet
     private $lienWeb;
 
     /**
-     * @ORM\OneToMany(targetEntity=Picture::class, mappedBy="projet")
+     * @ORM\OneToMany(targetEntity=Picture::class, mappedBy="projet", cascade={"persist"})
      */
     private $pictures;
 
@@ -160,5 +160,10 @@ class Projet
         $this->competences->removeElement($competence);
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->intitule;
     }
 }
