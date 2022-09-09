@@ -8,3 +8,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+/src/DataFixtures/
+/migrations/
+/public/files/
+/public/.DS_Store

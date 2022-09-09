@@ -54,11 +54,6 @@ class Picture
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $localisation;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Projet::class, inversedBy="pictures")
      */
     private $projet;
@@ -111,18 +106,6 @@ class Picture
     public function setName(?string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getLocalisation(): ?string
-    {
-        return $this->localisation;
-    }
-
-    public function setLocalisation(?string $localisation): self
-    {
-        $this->localisation = $localisation;
 
         return $this;
     }
