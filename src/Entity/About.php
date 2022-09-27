@@ -22,6 +22,11 @@ class About
      */
     private $contenu;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Picture::class, cascade={"persist", "remove"})
+     */
+    private $aboutPicture;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class About
     public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    public function getAboutPicture(): ?Picture
+    {
+        return $this->aboutPicture;
+    }
+
+    public function setAboutPicture(?Picture $aboutPicture): self
+    {
+        $this->aboutPicture = $aboutPicture;
 
         return $this;
     }
