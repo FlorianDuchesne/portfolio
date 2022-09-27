@@ -23,7 +23,7 @@ class PictureCrudController extends AbstractCrudController
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyOnForms(),
             ImageField::new('fichier')->setBasePath('/files')->onlyOnIndex(),
             TextField::new('name'),
-            AssociationField::new('projet'),
+            // AssociationField::new('projet'),
         ];
     }
 }

@@ -20,7 +20,8 @@ class CurriculumCrudController extends AbstractCrudController
         return [
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyOnForms(),
             TextField::new('name'),
-            TextField::new('fichier'),
+            // TextField::new('fichier'),
+            ImageField::new('fichier')->setBasePath('/files')->onlyOnIndex(),
         ];
     }
 }

@@ -17,7 +17,8 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        // return parent::index();
+        return $this->render('admin/index.html.twig');
     }
 
     public function configureDashboard(): Dashboard
@@ -43,12 +44,5 @@ class DashboardController extends AbstractDashboardController
             ->setController(PictureCrudController::class);
         yield MenuItem::linkToCrud('Projet', 'fas fa-check', Projet::class)
             ->setController(ProjetCrudController::class);
-
-
-
-
-
-
-
     }
 }
