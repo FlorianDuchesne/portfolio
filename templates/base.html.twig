@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://kit.fontawesome.com/e2a8fec256.js" crossorigin="anonymous"></script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
 		<script>
@@ -52,25 +53,6 @@ console.log('FAILED...', error);
 	</head>
 	<body>
 		{% block body %}
-
-			<form id="contact-form">
-				<div class="field">
-					<label for="from_name">from_name</label>
-					<input type="text" name="from_name" id="from_name">
-				</div>
-				<div class="field">
-					<label for="message">message</label>
-					<input type="text" name="message" id="message">
-				</div>
-				<div class="field">
-					<label for="user_email">user_email</label>
-					<input type="text" name="user_email" id="user_email">
-				</div>
-                <div class="g-recaptcha" data-sitekey="6Ld33vkhAAAAAH50aoNV0qy3KmXlDf76IS6ln2ss"></div>
-				<br/>
-				<input type="submit" id="button" value="Send Email">
-			</form>
-
 		{% endblock %}
 	</body>
 </html>
