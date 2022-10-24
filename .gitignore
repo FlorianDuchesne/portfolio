@@ -10,7 +10,6 @@
 ###< symfony/framework-bundle ###
 /src/DataFixtures/
 /migrations/
-/public/files/
 /public/.DS_Store
 
 ###> symfony/webpack-encore-bundle ###
