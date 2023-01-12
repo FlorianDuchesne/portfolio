@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BD9FH4RSQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaise Vivante</title>
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('home') }}
+		{% endblock %}
+  </head>
+  <body>
+    <h1>Chaise Vivante</h1>
+    <p>
+      Bienvenue dans le domaine de Florian Duchesne. Voici répertoriés sur cette
+      page les différents sites de ce domaine. <br />Plusieurs sont
+      indisponibles puisqu'encore en construction.
+    </p>
+    <ul>
+      <li id="un">
+        <a href="{{ path('japon') }}"
+          >Chroniques d'un PVT au Japon</a
+        >
+      </li>
+      <li id="deux">
+        <a href="{{ path('superfantome') }}"
+          >Super Fantôme contre le docteur Krapougnat</a
+        >
+      </li>
+      <li id="trois"><a href="#">Portofolio (en construction)</a></li>
+    </ul>
+
+    <p>
+      Vous pouvez aussi trouver des empreintes numériques de Florian sur
+      <a href="https://www.facebook.com/florian.duchesne">facebook</a>,
+      <a href="https://www.linkedin.com/in/florian-duchesne-020aaa10b/"
+        >LinkedIn</a
+      >, <a href="https://www.instagram.com/duchesne.florian/">instagram</a>,
+      <a href="https://www.youtube.com/watch?v=OVqeuXgw4IY">youtube</a>,
+      <a href="https://florianduchesne.tumblr.com/">tumblr</a>.
+    </p>
+  </body>
+</html>

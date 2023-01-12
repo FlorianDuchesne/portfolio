@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BD9FH4RSQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('superFantome') }}
+		{% endblock %}
+  </head>
+  <body>
+    <header>
+      <img src="{{ asset('superfantome/banniere.png') }}" alt="bannière super fantôme" />
+    </header>
+    <main>
+      <img
+        class="dessinFantome"
+        src="{{asset('superfantome/dessin_couverture_blanc.png')}}" alt="illustration"/>
+      <div class="flexColonne">
+        <h1 class="text">contre le docteur <strong>Krapougnat !</strong></h1>
+        <a href="{{path('sf_lecture')}}" id="start">Start !</a>
+      </div>
+      <div class="flexColonnetext">
+        <p class="text auteur">- par Florian Duchesne -</p>
+        <p class="text">
+          Un récit dont<br /><strong>vous</strong><br />êtes le héros !
+        </p>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <a href="{{path('sf_liens')}}">Liens</a>
+        <a href="{{path('sf_apropos')}}">À propos</a>
+      </nav>
+    </footer>
+  </body>
+</html>

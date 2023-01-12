@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class BasicController extends AbstractController
 {
     /**
-     * @Route("/", name="app_basic")
+     * @Route("/portfolio", name="app_basic")
      */
     public function index(AboutRepository $aboutRepo, 
     CompetencesRepository $compRepo, 
@@ -44,4 +44,53 @@ class BasicController extends AbstractController
             'projets' => $projets
         ]);
     }
+
+    /**
+     * @Route("/", name="accueil")
+     */
+    public function home():Response {
+
+        return $this->render('/accueil.html.twig');
+    }
+
+    /**
+     * @Route("/chroniquesjapon", name="japon")
+     */
+    public function japon():Response {
+
+        return $this->render('/chroniquesJapon/index.html.twig');
+    }
+
+    /**
+     * @Route("/superfantome", name="superfantome")
+     */
+    public function superFantome():Response {
+
+        return $this->render('/superfantome/index.html.twig');
+    }
+
+        /**
+     * @Route("/superfantome/lecture", name="sf_lecture")
+     */
+    public function superFantome_lecture():Response {
+
+        return $this->render('/superfantome/lecture.html.twig');
+    }
+
+        /**
+     * @Route("/superfantome/liens", name="sf_liens")
+     */
+    public function superFantome_liens():Response {
+
+        return $this->render('/superfantome/liens.html.twig');
+    }
+
+        /**
+     * @Route("/superfantome/apropos", name="sf_apropos")
+     */
+    public function superFantome_apropos():Response {
+
+        return $this->render('/superfantome/apropos.html.twig');
+    }
+
 }
