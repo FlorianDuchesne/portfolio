@@ -25,6 +25,11 @@ Encore
     .addEntry('superFantome', './assets/superfantome.js')
     .addEntry('superFantome_lecture', './assets/superfantome_lecture.js')
     .addEntry('japon', './assets/japon.js')
+    .addEntry('japon_lecture', './assets/japon_lecture.js')
+    .addEntry('japon_liens', './assets/japon_liens.js')
+    .addEntry('japon_apropos', './assets/japon_apropos.js')
+    .addEntry('japon_contact', './assets/japon_contact.js')
+
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

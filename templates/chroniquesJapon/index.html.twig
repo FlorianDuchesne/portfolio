@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BD9FH4RSQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('japon') }}
+		{% endblock %}
+  </head>
+  <body>
+    <div class="container">
+    {{ include('chroniquesJapon/elements/_header.html.twig') }}
+      <main>
+
+      {% for chronique in chroniques %}
+
+        <a href={{path('japon_lecture', {'chronique': chronique.id})}} class="survol">
+          <div class="overlay">
+            <h2 class="texte">
+              {{chronique.id}} : <br />
+              {{chronique.titre}}
+            </h2>
+          </div>
+          <img
+            src={{ asset('japon/elements_graphiques/ronds/' ~ chronique.fichier ) }}
+            alt="{{chronique.titre}}"
+            class="image"
+          />
+        </a>
+
+      {% endfor %}
+
+      </main>
+      <footer>
+        <small>&copy; Florian Duchesne</small>
+        <!-- <a href="contact.html">Contact</a> -->
+      </footer>
+    </div>
+  </body>
+</html>

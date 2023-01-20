@@ -1,0 +1,68 @@
+<html lang="fr">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BD9FH4RSQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/lecture.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e2a8fec256.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('japon_lecture') }}
+		{% endblock %}
+    {% block javascripts %}
+      {{ encore_entry_script_tags('japon_lecture') }}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+    {{ include('chroniquesJapon/elements/_header.html.twig') }}
+      <main>
+
+      {% if chronique is not null %}
+
+      <h1>{{ chronique.id}} : {{chronique.titre}}</h1>
+      <figure>
+      {% for page in pages %}
+
+        {% if loop.first %}
+          <img src={{ asset('files/' ~ page.fichier)}} alt={{page.name}} />
+        {% else %}
+          <img class="hidden" src={{ asset('files/' ~ page.fichier)}} alt={{page.name}} />
+        {% endif %}
+      {% endfor %}
+        <figcaption>
+          <a class="first" href="">
+            <i id="clicGauche" class="fas fa-arrow-left"></i>
+          </a>
+          {% if chroniqueSuivante is not null %}
+          <a href={{path('japon_lecture', {'chronique': chroniqueSuivante})}}><i id="clicDroit" class="fas fa-arrow-right"></i>
+          {% else %}
+          <a href={{path('japon_end')}}><i id="clicDroit" class="fas fa-arrow-right"></i>
+          {% endif %}
+          </a>
+        </figcaption>
+      </figure>
+
+    {% else %}
+    <div class="end">
+      <h1>Désolé, la prochaine chronique n'est pas (encore) publiée !</h1>
+      <p>N'hésitez pas à suivre la <a href="https://www.facebook.com/profile.php?id=100064881932521" target="_blank" rel="noopener noreferrer">page facebook</a> pour vous tenir au courant !</p>
+    </div>
+    {% endif %}
+    </main>
+    <footer>
+      <small>&copy; Florian Duchesne</small>
+    </footer>
+  </div>
+</body>
+</html>

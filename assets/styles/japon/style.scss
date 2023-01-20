@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Wildstripe Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Wildstripe Regular"), url("./Wildstripe.woff") format("woff");
+}
+
+/* * {
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: lighter;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+body {
+  width: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-color: rgb(255, 51, 102);
+}
+
+p, a {
+  font-family: "Wildstripe Regular";
+  text-decoration: none;
+  color: black;
+}
+
+.end a {
+  display: inline;
+  color: rgb(255, 51, 102);
+}
+.end p {
+  margin: auto;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+}
+
+.grand {
+  width: 100%;
+}
+
+.petit {
+  visibility: hidden;
+  width: 0%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0em 1em;
+  font-size: 150%;
+}
+
+nav a:hover {
+  color: rgb(255, 51, 102);
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: rgb(255, 51, 102);
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 100px 0 80px 0;
+}
+
+main a {
+  display: block;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0.3em;
+  overflow: hidden;
+}
+
+.survol {
+  position: relative;
+}
+
+.survol:hover .image {
+  transform: scale(1.2);
+}
+
+.survol:hover .overlay {
+  z-index: 3;
+  background-color: rgba(255, 51, 102, 0.767);
+  cursor: pointer;
+}
+
+.survol:hover .texte {
+  opacity: 1;
+  z-index: 5;
+}
+
+.survol .texte {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: fit-content;
+  text-align: center;
+  color: white;
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 200px;
+  border-radius: 50%;
+  transition: 0.5s ease;
+  background-color: rgba(255, 51, 102, 0);
+}
+
+.image {
+  display: block;
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+footer {
+  /* display: none; */
+  font-family: "Wildstripe Regular";
+  text-align: center;
+  /* font-size: 150%; */
+  margin: 1em;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    margin: 0%;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+  }
+
+  .petit {
+    visibility: visible;
+    width: 100%;
+    vertical-align: top;
+  }
+  .grand {
+    width: 0%;
+    visibility: hidden;
+  }
+
+  main a {
+    margin: 1em;
+  }
+}

@@ -10,4 +10,14 @@ vich_uploader:
             inject_on_load: false
             delete_on_update: true
             delete_on_remove: true
+            
+        ronds:
+            uri_prefix: /ronds
+            upload_destination: '%kernel.project_dir%/public/japon/elements_graphiques/ronds/'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
 

@@ -1,2 +1,2 @@
-import './styles/japon.scss';
+import './styles/japon/style.scss';
 

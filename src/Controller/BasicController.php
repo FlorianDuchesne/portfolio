@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\About;
+use App\Entity\ChroniqueJapon;
 use App\Entity\Competences;
 use App\Entity\Curriculum;
 use App\Repository\AboutRepository;
+use App\Repository\ChroniqueJaponRepository;
 use App\Repository\CompetencesRepository;
 use App\Repository\CurriculumRepository;
 use App\Repository\ExperiencesRepository;
@@ -56,9 +58,53 @@ class BasicController extends AbstractController
     /**
      * @Route("/chroniquesjapon", name="japon")
      */
-    public function japon():Response {
+    public function japonIndex(ChroniqueJaponRepository $repo):Response {
 
-        return $this->render('/chroniquesJapon/index.html.twig');
+        return $this->render('/chroniquesJapon/index.html.twig', [
+            'chroniques' => $repo->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/chroniquesjapon/Apropos", name="japon_apropos")
+     */
+    public function japonApropos():Response {
+
+        return $this->render('/chroniquesJapon/Apropos.html.twig');
+    }
+
+    /**
+     * @Route("/chroniquesjapon/Liens", name="japon_liens")
+     */
+    public function japonLiens():Response {
+
+        return $this->render('/chroniquesJapon/Liens.html.twig');
+    }
+
+    /**
+     * @Route("/chroniquesjapon/{chronique}", name="japon_lecture")
+     * @Route("/chroniquesjapon/end", name="japon_end")
+     */
+    public function japonLecture(ChroniqueJapon $chronique = null, ChroniqueJaponRepository $repo):Response {
+
+        if ($chronique !== null){
+            $chroniqueSuivante = $repo->findOneBy(['id' => ($chronique->getId() + 1)]);
+            if (!$chroniqueSuivante){
+                $chroniqueSuivante = null;
+            } else {
+                $chroniqueSuivante = $chroniqueSuivante->getId();
+            }
+            $pages = $chronique->getPages();
+        } else {
+            $chroniqueSuivante = null;
+            $pages = null;
+        }
+
+        return $this->render('/chroniquesJapon/lecture.html.twig', [
+            'chronique' => $chronique,
+            'pages' => $pages,
+            'chroniqueSuivante' => $chroniqueSuivante,
+        ]);
     }
 
     /**

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BD9FH4RSQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('japon_apropos') }}
+		{% endblock %}
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+    {{ include('chroniquesJapon/elements/_header.html.twig') }}
+      <main>
+        <figure>
+          <img
+            src={{asset('japon/elements_graphiques/portrait.jpg')}}
+            alt="image de l'auteur"
+          />
+        </figure>
+        <h1>À propos de l'auteur</h1>
+        <p>
+          Florian Duchesne vit à Strasbourg.
+          Il a étudié à l'atelier Illustration à l'école des arts-décoratifs de
+          Strasbourg (aujourd'hui appelée la HEAR).
+          La passion de sa compagne pour le Japon lui a donné cette belle
+          opportunité de faire un PVT là-bas.
+          Il est aujourd'hui en reconversion professionnelle mais apprécie
+          toujours la bande dessinée et l'illustration.
+        </p>
+      </main>
+      <footer>
+        <small>&copy; Florian Duchesne</small>
+      </footer>
+    </div>
+  </body>
+</html>

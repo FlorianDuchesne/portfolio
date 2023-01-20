@@ -1,0 +1,10 @@
+DELETE FROM chronique_japon;
+INSERT INTO chronique_japon VALUES(1,'0', 'De Strasbourg à Tokyo', 'rond1.png', '');
+INSERT INTO chronique_japon VALUES(2,'0', 'Les Premiers Jours', 'rond2.png', '');
+INSERT INTO chronique_japon VALUES(3,'0', 'Hagibis', 'rond3.png', '');
+INSERT INTO chronique_japon VALUES(4,'0', 'Tokyo', 'rond4.png', '');
+INSERT INTO chronique_japon VALUES(5,'0', 'Otsuka', 'rond5.png', '');
+INSERT INTO chronique_japon VALUES(6,'0', 'De Tokyo à Obuse', 'rond6.png', '');
+INSERT INTO chronique_japon VALUES(7,'0', 'De Obuse à Komoro', 'rond7.png', '');
+INSERT INTO chronique_japon VALUES(8,'0', 'Un Séjour à Seiunkan, Komoro', 'rond8.png', '');
+INSERT INTO chronique_japon VALUES(9,'0', 'De Komoro à Takayama', 'rond9.png', '');

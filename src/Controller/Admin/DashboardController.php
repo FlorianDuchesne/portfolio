@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\ChroniqueJapon;
 use App\Entity\Competences;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -44,5 +45,8 @@ class DashboardController extends AbstractDashboardController
             ->setController(PictureCrudController::class);
         yield MenuItem::linkToCrud('Projet', 'fas fa-check', Projet::class)
             ->setController(ProjetCrudController::class);
+        yield MenuItem::linkToCrud('ChroniqueJapon', 'fas fa-book', ChroniqueJapon::class)
+            ->setController(ChroniqueJaponCrudController::class);
+
     }
 }
