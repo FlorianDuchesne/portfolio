@@ -21,7 +21,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class BasicController extends AbstractController
 {
     /**
-     * @Route("/portfolio", name="app_basic")
+     * @Route("/portfolio/", name="app_basic")
      */
     public function index(AboutRepository $aboutRepo, 
     CompetencesRepository $compRepo, 
@@ -56,7 +56,7 @@ class BasicController extends AbstractController
     }
 
     /**
-     * @Route("/chroniquesjapon", name="japon")
+     * @Route("/chroniquesjapon/", name="japon")
      */
     public function japonIndex(ChroniqueJaponRepository $repo):Response {
 
@@ -66,7 +66,7 @@ class BasicController extends AbstractController
     }
 
     /**
-     * @Route("/chroniquesjapon/Apropos", name="japon_apropos")
+     * @Route("/chroniquesjapon/Apropos/", name="japon_apropos")
      */
     public function japonApropos():Response {
 
@@ -74,7 +74,7 @@ class BasicController extends AbstractController
     }
 
     /**
-     * @Route("/chroniquesjapon/Liens", name="japon_liens")
+     * @Route("/chroniquesjapon/Liens/", name="japon_liens")
      */
     public function japonLiens():Response {
 
@@ -82,8 +82,8 @@ class BasicController extends AbstractController
     }
 
     /**
-     * @Route("/chroniquesjapon/{chronique}", name="japon_lecture")
-     * @Route("/chroniquesjapon/end", name="japon_end")
+     * @Route("/chroniquesjapon/{chronique}/", name="japon_lecture")
+     * @Route("/chroniquesjapon/end/", name="japon_end")
      */
     public function japonLecture(ChroniqueJapon $chronique = null, ChroniqueJaponRepository $repo):Response {
 
@@ -108,7 +108,7 @@ class BasicController extends AbstractController
     }
 
     /**
-     * @Route("/superfantome", name="superfantome")
+     * @Route("/superfantome/", name="superfantome")
      */
     public function superFantome():Response {
 
@@ -116,7 +116,7 @@ class BasicController extends AbstractController
     }
 
         /**
-     * @Route("/superfantome/lecture", name="sf_lecture")
+     * @Route("/superfantome/lecture/", name="sf_lecture")
      */
     public function superFantome_lecture():Response {
 
@@ -124,7 +124,7 @@ class BasicController extends AbstractController
     }
 
         /**
-     * @Route("/superfantome/liens", name="sf_liens")
+     * @Route("/superfantome/liens/", name="sf_liens")
      */
     public function superFantome_liens():Response {
 
@@ -132,7 +132,7 @@ class BasicController extends AbstractController
     }
 
         /**
-     * @Route("/superfantome/apropos", name="sf_apropos")
+     * @Route("/superfantome/apropos/", name="sf_apropos")
      */
     public function superFantome_apropos():Response {
 
