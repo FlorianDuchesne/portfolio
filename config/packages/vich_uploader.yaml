@@ -4,7 +4,7 @@ vich_uploader:
     mappings:
         files:
             uri_prefix: /files
-            upload_destination: '%kernel.project_dir%/public/files'
+            upload_destination: '%kernel.project_dir%/www/files'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
 
             inject_on_load: false
@@ -13,7 +13,7 @@ vich_uploader:
             
         ronds:
             uri_prefix: /ronds
-            upload_destination: '%kernel.project_dir%/public/japon/elements_graphiques/ronds/'
+            upload_destination: '%kernel.project_dir%/www/japon/elements_graphiques/ronds/'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
 
             inject_on_load: false
