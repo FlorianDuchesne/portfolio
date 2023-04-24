@@ -9,7 +9,7 @@ document.querySelector("#inventaire").innerHTML =
 
 document.querySelector("#modeTriche").addEventListener("click", function () {
   document.querySelector("#modeTriche").innerHTML =
-    "<a href='lecture.html'>Désactiver mode Triche</a>";
+    "<a href='/superfantome/lecture'>Désactiver mode Triche</a>";
   triche = true;
   document.querySelector("main").classList.add("mainTriche");
   document.querySelector("footer").classList.add("footerTriche");
