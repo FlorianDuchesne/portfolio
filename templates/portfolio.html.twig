@@ -83,9 +83,9 @@
 					<input type="text" name="user_email" placeholder="votre email" id="user_email">
 				</div>
 				<div class="field">
-					<textarea type="text" name="message" id="message">votre message</textarea>
+					<textarea type="text" name="message" id="message" placeholder="votre message"></textarea>
 				</div>
-        <div class="g-recaptcha" data-sitekey="6LexqPkhAAAAAGlznCL9c8dCP7kzXMPHAYlEt7Q9"></div>
+        <div class="g-recaptcha" data-sitekey="6Ld33vkhAAAAAH50aoNV0qy3KmXlDf76IS6ln2ss"></div>
 				<input type="submit" id="button" value="Send Email">
 			</form>
 </section>
@@ -98,3 +98,7 @@
 <small>&#169; Florian Duchesne 2022</small>
 </footer>
 {% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('portfolio') }}
+		{% endblock %}
