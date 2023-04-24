@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8BD9FH4RSQ');
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chaise Vivante</title>
+{% extends "base.html.twig" %}
     {% block stylesheets %}
 			{{ encore_entry_link_tags('home') }}
 		{% endblock %}
-  </head>
-  <body>
+{% block body %}
     <h1>Chaise Vivante</h1>
     <p>
       Bienvenue dans le domaine de Florian Duchesne. Voici répertoriés sur cette
@@ -46,5 +32,4 @@
       <a href="https://www.youtube.com/watch?v=OVqeuXgw4IY">youtube</a>,
       <a href="https://florianduchesne.tumblr.com/">tumblr</a>.
     </p>
-  </body>
-</html>
+{% endblock %}

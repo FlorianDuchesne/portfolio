@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8BD9FH4RSQ');
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% extends "chroniquesJapon/layout.html.twig" %}
+
     {% block stylesheets %}
 			{{ encore_entry_link_tags('japon_liens') }}
 		{% endblock %}
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-    {{ include('chroniquesJapon/elements/_header.html.twig') }}
+    {% block content %}
       <main>
         <figure>
           <img
@@ -51,9 +36,4 @@
           >
         </figure>
       </main>
-      <footer>
-        <small>&copy; Florian Duchesne</small>
-      </footer>
-    </div>
-  </body>
-</html>
+		{% endblock %}

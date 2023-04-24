@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8BD9FH4RSQ');
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
+{% extends "base.html.twig" %}
     {% block stylesheets %}
       {{ encore_entry_link_tags('superFantome_lecture') }}
 		{% endblock %}
     {% block javascripts %}
       {{ encore_entry_script_tags('superFantome_lecture') }}
     {% endblock %}
-  </head>
-  <body>
+  {% block body %}
     <header>
       <a href="{{path('sf_lecture')}}"
         ><img src="{{asset('superfantome/banniereLecture.png')}}" alt="bannière super fantôme"
@@ -778,9 +760,8 @@
     </main>
     <footer>
       <nav>
-        <a href="liens.html">Liens</a>
-        <a href="apropos.html">À propos</a>
+        <a href="{{path('sf_liens')}}">Liens</a>
+        <a href="{{path('sf_apropos')}}">À propos</a>
       </nav>
     </footer>
-  </body>
-</html>
+{% endblock %}

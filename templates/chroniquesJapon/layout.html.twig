@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="container">
+  {% block header %}
+    {{ include('chroniquesJapon/elements/_header.html.twig') }}            
+  {% endblock %}
+  {% block content %}{% endblock %}
+  <footer>
+    <small>&copy; Florian Duchesne</small>
+  </footer>
+</div>
+{% endblock %}

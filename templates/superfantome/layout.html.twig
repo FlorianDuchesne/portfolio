@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+    {% block javascripts %}
+    {% endblock %}
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('superFantome') }}
+		{% endblock %}
+  {% block body %}
+    <header>
+      <a href="{{path('sf_lecture')}}">
+        <img src="{{asset('superfantome/banniere.png')}}" alt="bannière super fantôme" />
+      </a>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+      <nav>
+        <a href="{{path('sf_liens')}}">Liens</a>
+        <a href="{{path('sf_apropos')}}">À propos</a>
+      </nav>
+    </footer>
+	{% endblock %}

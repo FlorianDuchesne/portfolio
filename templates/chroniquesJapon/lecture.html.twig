@@ -1,31 +1,12 @@
-<html lang="fr">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BD9FH4RSQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8BD9FH4RSQ');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/lecture.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/e2a8fec256.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Document</title>
+  {% extends "chroniquesJapon/layout.html.twig" %}
+
     {% block stylesheets %}
 			{{ encore_entry_link_tags('japon_lecture') }}
 		{% endblock %}
     {% block javascripts %}
       {{ encore_entry_script_tags('japon_lecture') }}
     {% endblock %}
-  </head>
-  <body>
-    <div class="container">
-    {{ include('chroniquesJapon/elements/_header.html.twig') }}
+      {% block content %}
       <main>
 
       {% if chronique is not null %}
@@ -60,9 +41,4 @@
     </div>
     {% endif %}
     </main>
-    <footer>
-      <small>&copy; Florian Duchesne</small>
-    </footer>
-  </div>
-</body>
-</html>
+    {% endblock %}
