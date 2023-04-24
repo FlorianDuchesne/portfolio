@@ -5,6 +5,7 @@
 }
 
 $blue: #00a091;
+$darkblue:#19877c;
 $orange: #fca67e;
 $white: seashell;
 
@@ -230,6 +231,9 @@ header {
       width: 91%;
       border-radius: 5px;
       margin: 1rem;
+    }
+    #button:hover{
+      background-color: $darkblue;
     }
   }
 }
