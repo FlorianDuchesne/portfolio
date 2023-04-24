@@ -21,5 +21,3 @@ yarn-error.log
 dumpDatabase2.sql
 .gitignore
 dumpDatabase.sql
-/www/build/*
-www/build/*

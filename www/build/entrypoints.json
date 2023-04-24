@@ -2,86 +2,93 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/198.f331b6da.js",
-        "/build/261.47fb30c2.js",
-        "/build/app.ec566f0b.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-ca5f19.js",
+        "/build/app.js"
       ],
       "css": [
-        "/build/app.8ecd559b.css"
+        "/build/app.css"
       ]
     },
     "home": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/home.13e7b317.js"
+        "/build/runtime.js",
+        "/build/home.js"
       ],
       "css": [
-        "/build/home.b4c592af.css"
+        "/build/home.css"
       ]
     },
     "superFantome": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/superFantome.4dd9d653.js"
+        "/build/runtime.js",
+        "/build/superFantome.js"
       ],
       "css": [
-        "/build/superFantome.1669cf5b.css"
+        "/build/superFantome.css"
       ]
     },
     "superFantome_lecture": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/198.f331b6da.js",
-        "/build/superFantome_lecture.834cf49d.js"
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
+        "/build/superFantome_lecture.js"
       ],
       "css": [
-        "/build/superFantome_lecture.5c2cbd50.css"
+        "/build/superFantome_lecture.css"
       ]
     },
     "japon": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/japon.35056aea.js"
+        "/build/runtime.js",
+        "/build/japon.js"
       ],
       "css": [
-        "/build/japon.cd81dab8.css"
+        "/build/japon.css"
       ]
     },
     "japon_lecture": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/japon_lecture.3a1db681.js"
+        "/build/runtime.js",
+        "/build/japon_lecture.js"
       ],
       "css": [
-        "/build/japon_lecture.e4749aca.css"
+        "/build/japon_lecture.css"
       ]
     },
     "japon_liens": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/japon_liens.57022b14.js"
+        "/build/runtime.js",
+        "/build/japon_liens.js"
       ],
       "css": [
-        "/build/japon_liens.3705bdf1.css"
+        "/build/japon_liens.css"
       ]
     },
     "japon_apropos": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/japon_apropos.375ddd44.js"
+        "/build/runtime.js",
+        "/build/japon_apropos.js"
       ],
       "css": [
-        "/build/japon_apropos.50bcb657.css"
+        "/build/japon_apropos.css"
       ]
     },
     "japon_contact": {
       "js": [
-        "/build/runtime.61b1725c.js",
-        "/build/japon_contact.d287c277.js"
+        "/build/runtime.js",
+        "/build/japon_contact.js"
       ],
       "css": [
-        "/build/japon_contact.9a4b7eb2.css"
+        "/build/japon_contact.css"
+      ]
+    },
+    "portfolio": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
+        "/build/portfolio.js"
       ]
     }
   }
