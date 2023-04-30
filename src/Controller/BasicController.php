@@ -82,6 +82,14 @@ class BasicController extends AbstractController
     }
 
     /**
+     * @Route("/chroniquesjapon/contact/", name="japon_contact")
+     */
+    public function japonContact():Response {
+
+        return $this->render('/chroniquesJapon/contact.html.twig');
+    }
+
+    /**
      * @Route("/chroniquesjapon/{chronique}/", name="japon_lecture")
      * @Route("/chroniquesjapon/end/", name="japon_end")
      */
@@ -118,7 +126,7 @@ class BasicController extends AbstractController
         /**
      * @Route("/superfantome/lecture/", name="sf_lecture")
      */
-    public function superFantome_lecture():Response {
+    public function superFantomeLecture():Response {
 
         return $this->render('/superfantome/lecture.html.twig');
     }
@@ -126,17 +134,26 @@ class BasicController extends AbstractController
         /**
      * @Route("/superfantome/liens/", name="sf_liens")
      */
-    public function superFantome_liens():Response {
+    public function superFantomeLiens():Response {
 
         return $this->render('/superfantome/liens.html.twig');
     }
 
-        /**
+    /**
      * @Route("/superfantome/apropos/", name="sf_apropos")
      */
-    public function superFantome_apropos():Response {
+    public function superFantomeApropos():Response {
 
         return $this->render('/superfantome/apropos.html.twig');
     }
+
+        /**
+     * @Route("/superfantome/contact/", name="sf_contact")
+     */
+    public function superFantomeContact():Response {
+
+        return $this->render('/superfantome/contact.html.twig');
+    }
+
 
 }
