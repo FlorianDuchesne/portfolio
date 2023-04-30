@@ -84,11 +84,11 @@
         "/build/japon_contact.css"
       ]
     },
-    "portfolio": {
+    "contact": {
       "js": [
         "/build/runtime.js",
         "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
-        "/build/portfolio.js"
+        "/build/contact.js"
       ]
     }
   }
