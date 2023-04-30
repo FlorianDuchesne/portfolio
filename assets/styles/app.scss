@@ -20,7 +20,7 @@ $white: seashell;
   position: absolute;
   left: -100px;
   width: 150%;
-  height: 97%;
+  height: 96%;
   z-index: -1;
   margin-top: 25px;
 }
@@ -82,6 +82,7 @@ header {
     }
 }
 #apropos{
+  padding-top: 20px;
   @include background();
   h2{
     color: $orange;
@@ -118,6 +119,7 @@ header {
 #apropos::before{
   @include backgroundBefore($blue, 2deg);
 }
+
 #parcours{
   h2{
     color: $orange;
@@ -188,6 +190,7 @@ header {
 }
 #projets::before{
   @include backgroundBefore($orange, -2deg);
+  padding-bottom: 75px;
 }  
 
 #contact{

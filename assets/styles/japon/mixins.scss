@@ -1,0 +1,10 @@
+@mixin flex($direction : row, $justify : center, $align : center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+}
+
+$red : rgb(255, 51, 102);
+$green: rgb(116, 240, 30);
+$darkGreen:rgb(117, 212, 48);
