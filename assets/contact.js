@@ -1,6 +1,9 @@
-var inputs = document.querySelectorAll("#contact-form .field");
+
+
+var inputs = document.querySelectorAll(".fieldInput");
+
 inputs.forEach(element => {
-  console.log(element.children[0]);
+  console.log(element);
 });
 console.log(inputs);
 
@@ -15,9 +18,9 @@ event.preventDefault();
 emailjs.sendForm('contact_service', 'contact_form', this).then(function () {
 console.log('SUCCESS!');
 alert("Le message a bien été expédié ! Merci pour le petit mot :)");
-var inputs = document.querySelectorAll("#contact-form .field");
+var inputs = document.querySelectorAll(".fieldInput");
 inputs.forEach(function(item, i){
-  item.children[0].value = "";
+  item.value = "";
 });
 }, function (error) {
 console.log('FAILED...', error);
