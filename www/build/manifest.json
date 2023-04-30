@@ -18,8 +18,10 @@
   "build/japon_contact.css": "/build/japon_contact.css",
   "build/japon_contact.js": "/build/japon_contact.js",
   "build/contact.js": "/build/contact.js",
+  "build/admin.js": "/build/admin.js",
   "build/runtime.js": "/build/runtime.js",
   "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js": "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-ca5f19.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-ca5f19.js",
+  "build/vendors-node_modules_iframe-resizer_js_iframeResizer_min_js.js": "/build/vendors-node_modules_iframe-resizer_js_iframeResizer_min_js.js",
   "build/fonts/Wildstripe.woff": "/build/fonts/Wildstripe.0ac2d81e.woff"
 }
