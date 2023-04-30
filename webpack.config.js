@@ -31,6 +31,7 @@ Encore
     .addEntry('japon_apropos', './assets/japon_apropos.js')
     .addEntry('japon_contact', './assets/japon_contact.js')
     .addEntry('contact', './assets/contact.js')
+    .addEntry('admin', './assets/admin.js')
 
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
