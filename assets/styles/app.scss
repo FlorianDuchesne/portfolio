@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,500;0,900;1,100;1,200;1,500;1,900&display=swap');
 
+html {
+  font-size: 100%;
+}
+
 *{
+  box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+}
+
+h3{
+  font-size: 2rem;
 }
 
 $blue: #00a091;
 $darkblue:#19877c;
 $orange: #fca67e;
 $white: seashell;
+
+@mixin flex($direction : row, $justify : center, $align : center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+}
 
 @mixin background(){
   position: relative;
@@ -29,12 +46,6 @@ $white: seashell;
 }
 
 body {
-  // background-color: ghostwhite;
-  // background-color: floralwhite;
-  // background-color:seashell;
-  // background-color: whitesmoke;
-  // background-color: snow;
-  // background-color: white;
   background-color: $white;
   margin: 0;
 }
@@ -71,7 +82,6 @@ header {
       width: 0%;
       margin: 0%;
       padding: 0%;
-      // display: flex;
       li {
         list-style: none;
       }
@@ -104,6 +114,10 @@ header {
       margin-bottom: 4rem;
       border-radius: 10px;
       @include filter(170%, 100%);
+      transition: ease-in-out 0.5s;
+      &:hover{
+        filter: none;
+      }
     }
   }
   #apropos_contenu {
@@ -115,6 +129,7 @@ header {
       margin: 1rem 0rem;
     }
   }
+
 }
 #apropos::before{
   @include backgroundBefore($blue, 2deg);
@@ -130,7 +145,7 @@ header {
     margin: 2rem 5rem;
   }
   p{
-    font-size: small;
+    // font-size: 18px;
     margin: 0.5rem 5rem;
     text-align: start;
     color: $blue;
@@ -169,19 +184,19 @@ header {
       width:  750px;
       height: 400px;
       object-fit: cover;  
-      // @include filter(70%, 50%);
+      // @include filter(100%, 100%);
       filter: brightness(90%);
       transition: 0.5s ease-in-out;
     }
     img:hover{
       filter: none;
     }
-    figcaption{
+    h3{
       // position: relative;
       // top: 50%;
       // left: 50%;
       // transform: translate(-50%, -50%);
-      font-size: xx-large;
+      // font-size: xx-large;
       color: $white;
       // text-shadow: black 1px 0 10px;
       // bottom: 1rem;
@@ -214,7 +229,7 @@ header {
       background-color:#e9e8e0;
       border: none;
       width: 90%;
-      margin: 1rem;
+      margin: 1rem auto;
       display: block;
       color: $blue;
       padding: 0.5rem;
@@ -225,18 +240,49 @@ header {
     #message{
       height: 100px;
     }
+    .form-bloc{
+      @include flex(row, space-between, center);
+      width: 90%;
+      margin: 1rem auto;
+    }
     .g-recaptcha{
-      margin: 1rem;
+      margin: 1rem auto;
+      width: 90%;
     }
     #button{
       background-color: $blue;
       color: $white;
       width: 91%;
       border-radius: 5px;
-      margin: 1rem;
     }
     #button:hover{
       background-color: $darkblue;
     }
+  }
+}
+#cv{
+  padding-top: 20px;
+  @include background();
+  height: 300px;
+  color: $white;
+  text-align: center;
+  p:nth-child(1){
+    margin-top: 3rem;
+  }
+  i{
+    color: $white;
+    font-size: xxx-large;
+  }
+}
+#cv::before{
+  @include backgroundBefore($blue, 2deg);
+  height: 71%;
+}  
+footer{
+  color: $orange;
+  text-align: center;
+  margin: 0.5rem;
+  small{
+    font-size: revert;
   }
 }
