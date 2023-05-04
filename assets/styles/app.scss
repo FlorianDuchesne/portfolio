@@ -32,37 +32,25 @@ $white: seashell;
   filter: sepia(100%) hue-rotate(118deg) brightness($brightness) saturate($saturate);
 }
 
-// html{
-//   font-size: 100%;
-// }
+html{
+  scroll-behavior:smooth;
+}
 
 body {
   background-color: $white;
   margin: 0;
-  // font-size: clamp(100%, 1rem + 2vw, 2rem);
 }
 
 *{
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
-  // font-size: 2rem;
 }
-@media only screen and (min-width: 768px){
-  *{
-    font-size: 1rem;
-  }
-  // input, textarea {
-  //   font-size: xx-large;
-  // }  
-  body{
-    background-color: black;
-  }
-}
-
 
 h3{
   font-size: 1.1rem;
-  // font-size: 2rem;
+  @media only screen and (min-width: 768px){
+  font-size: 2rem;
+  }
 }
 
 a{
@@ -70,8 +58,10 @@ a{
 }
 h2{
   text-align: center;
-  // margin: 5rem 0rem 4rem;
-  // font-size: xxx-large;
+  @media only screen and (min-width: 768px){
+    margin: 5rem 0rem 4rem;
+    font-size: xx-large;
+}
   font-size: 1.3rem;
   margin: 3rem 0rem 1rem;
 }
@@ -80,44 +70,66 @@ img{
 }
 .fa-bars{
   font-size: 2rem;
+  @media only screen and (min-width: 768px){
+    display: none;
+  }
   // margin: 1rem;
 }
 
 header {
-  // height: 140px;
+  @media only screen and (max-width: 768px){
+    margin: 0rem 1rem;
+    h1{
+      font-size: 1.5rem;
+    }    
+    ul{
+      display: none;
+      opacity: 0;
+      width: 0%;
+      margin: 0%;
+      padding: 0%;
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        margin: 1rem;
+      }
+    }  
+    nav{
+      height: 30px;
+      width: 30px;
+    }  
+  }
+  @media only screen and (min-width: 768px){
+    height: 90px;
+    margin: 5.5vh 0.5vw 0vh;
+    h1{
+      font-size: 2.5rem;
+      margin: 0 2rem;
+    }  
+    ul{
+      display: flex;
+      list-style-type: "#";
+      font-size: 1.3rem;
+      li{
+        margin: 0rem 1rem;
+        a{
+          color: $blue;
+        }  
+      }
+    }
+  }
   color: $orange;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  // margin: 0.5vh 0.5vw;
-  margin: 0rem 1rem;
-  h1{
-    // font-size: 3.5rem;
-    font-size: 1.5rem;
-    // margin: 0 2rem;
-  }  
-  nav{
-    height: 30px;
-    width: 30px;
-  }
-  ul{
-    display: none;
-    opacity: 0;
-    width: 0%;
-    margin: 0%;
-    padding: 0%;
-    li {
-      list-style: none;
-    }
-    a {
-      text-decoration: none;
-      margin: 1rem;
-    }
-  }
 }
 #apropos{
-  // padding-top: 20px;
+  @media only screen and (min-width: 768px){
+    padding-top: 35px;
+  }
   @include background();
   h2{
     color: $orange;
@@ -131,9 +143,18 @@ header {
     font-weight: bold;
   }
   #apropos_bloc{
-    display: flex;
+    @include flex(column-reverse, center, center);
+    @media only screen and (min-width: 768px){
+      flex-direction: row;
+    }
     flex-direction: column-reverse;
     img{
+      @media only screen and (min-width: 768px){
+        height: 400px;
+        width: auto;
+        position: relative;
+        top: -110px;
+      }
       width: 40vw;
       margin:auto;
       // margin-bottom: 4rem;
@@ -147,9 +168,11 @@ header {
     }
   }
   #apropos_contenu {
+    @media only screen and (min-width: 768px){
+      padding: 2rem 0rem;
+      margin: 0rem 5rem auto 6rem;
+    }
     color: $white;  
-    // padding: 2rem 0rem;
-    // margin: 0rem 5rem;
     margin: 0rem 2rem;
     text-align: start;
     div{
@@ -161,22 +184,36 @@ header {
 #apropos::before{
   @include backgroundBefore($blue, 2deg);
   margin-top: 10px;
+  @media only screen and (min-width: 768px){
+    height: 85%;
+  }
 }
 
 #parcours{
-  margin: 2rem;
+  @media only screen and (max-width: 768px){
+    margin: 2rem;
+  }
+  @media only screen and (min-width: 768px){
+    margin: 2rem 6rem;
+    padding-bottom: 3rem;
+    h2{
+      margin: 2rem 0rem 0rem;
+    }
+    h3{
+      margin: 2rem 0rem;
+    }
+    p{
+      margin: 0.5rem 0rem;
+    }
+  }
   margin-top: -2rem;
   h2{
     color: $orange;
-    // margin: 2rem 0rem 4rem;
   }
   h3{
     color: $blue;
-    // margin: 2rem 5rem;
   }
   p{
-    // font-size: 18px;
-    // margin: 0.5rem 5rem;
     text-align: start;
     color: $blue;
     em {
@@ -194,13 +231,50 @@ header {
     content:"#";
     color: $orange;
   }
-  // padding-bottom: 3rem;
 }
 #projets{
+  @media only screen and (max-width: 768px){
+    h2{
+      margin: 4rem 0rem 3rem;
+    }
+    h3{
+      margin: 0.5rem auto 1rem;
+    }
+    figure{
+      height: 27vh;
+      img{
+        height: 20vh;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px){
+    margin: inherit;
+    .listeProjets{
+      @include flex();
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    a{
+      margin: 3rem 4rem;
+      figure{
+        width: 25vw;
+        height: 360px;
+        position: relative;
+        margin: auto;
+        img{
+          width:  100%;
+          height: 280px;
+        }
+        h3{
+          margin: 1rem;
+          font-size: 1.5rem;
+        }
+      }  
+    }
+  }
   @include background();
   h2{
     color: $blue;
-    margin: 4rem 0rem 3rem;
   }
   figure{
     text-align: center;
@@ -215,7 +289,6 @@ header {
     img{
       // width:  750px;
       // height: 400px;
-      height: 170px;
       object-fit: cover;  
       // @include filter(100%, 100%);
       filter: brightness(90%);
@@ -225,15 +298,7 @@ header {
       filter: none;
     }
     h3{
-      margin: 0.5rem auto 1rem;
-      // position: relative;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
-      // font-size: xx-large;
       color: $white;
-      // text-shadow: black 1px 0 10px;
-      // bottom: 1rem;
     }
   }
 }
