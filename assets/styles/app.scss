@@ -274,13 +274,15 @@ header {
       margin: 5rem 0rem 1rem;
     }
     .listeProjets{
+      margin: auto;
+      width: 93vw;
       @include flex();
       flex-wrap: wrap;
       justify-content: flex-start;
     }
     a{
       // margin: 3rem 4rem;
-      margin: 3rem 3rem;
+      margin: 3vw;
       figure{
         width: 25vw;
         // height: 260px;
@@ -301,10 +303,10 @@ header {
       }  
     }
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1285px) {
     .listeProjets{
-      margin: auto;
-      width: 85%;
+    //   margin: auto;
+      width: 85vw;
     }
     a{
       margin: 3vw;
