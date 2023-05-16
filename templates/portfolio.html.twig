@@ -56,7 +56,7 @@
       <a href="">
         <figure>
           <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}">
-          <figcaption><h3>{{projet.intitule}}</h3></figcaption>
+          <figcaption><h3>{{projet.intitule|capitalize }}</h3></figcaption>
         </figure>
       </a>
     {% endfor %}
