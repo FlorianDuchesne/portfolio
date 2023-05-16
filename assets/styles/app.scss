@@ -59,7 +59,8 @@ a{
 h2{
   text-align: center;
   @media only screen and (min-width: 768px){
-    margin: 5rem 0rem 4rem;
+    // margin: 5rem 0rem 4rem;
+    margin: 5rem 0rem 2rem;
     font-size: xx-large;
 }
   font-size: 1.3rem;
@@ -129,6 +130,15 @@ header {
 #apropos{
   @media only screen and (min-width: 768px){
     padding-top: 35px;
+    h2{
+      margin: 4rem 0rem 2rem;
+    }  
+  }
+  @media only screen and (max-width: 768px){
+    padding-top: 35px;
+    h2{
+      margin: 3rem 0rem 2rem;
+    }  
   }
   @include background();
   h2{
@@ -145,6 +155,7 @@ header {
   #apropos_bloc{
     @include flex(column-reverse, center, center);
     @media only screen and (min-width: 768px){
+      width: 90vw;
       flex-direction: row;
     }
     flex-direction: column-reverse;
@@ -153,7 +164,8 @@ header {
         height: 400px;
         width: auto;
         position: relative;
-        top: -110px;
+        // top: -110px;
+        top: -85px;
       }
       width: 40vw;
       margin:auto;
@@ -192,12 +204,16 @@ header {
 #parcours{
   @media only screen and (max-width: 768px){
     margin: 2rem;
+    h2{
+      margin: 3rem 0rem 3rem;
+    }
   }
   @media only screen and (min-width: 768px){
     margin: 2rem 6rem;
     padding-bottom: 3rem;
     h2{
-      margin: 2rem 0rem 0rem;
+      // margin: 2rem 0rem 0rem;
+      margin: -2rem 0rem 0rem;
     }
     h3{
       margin: 2rem 0rem;
@@ -235,7 +251,7 @@ header {
 #projets{
   @media only screen and (max-width: 768px){
     h2{
-      margin: 4rem 0rem 3rem;
+      margin: 4rem 0rem 4rem;
     }
     h3{
       margin: 0.5rem auto 1rem;
@@ -248,26 +264,35 @@ header {
     }
   }
   @media only screen and (min-width: 768px){
+    padding-bottom: 100px;
     margin: inherit;
+    h2{
+      margin: 5rem 0rem 1rem;
+    }
     .listeProjets{
       @include flex();
       flex-wrap: wrap;
       justify-content: flex-start;
     }
     a{
-      margin: 3rem 4rem;
+      // margin: 3rem 4rem;
+      margin: 3rem 3rem;
       figure{
         width: 25vw;
-        height: 360px;
+        // height: 260px;
+        height: 235px;
         position: relative;
         margin: auto;
         img{
           width:  100%;
-          height: 280px;
+          // height: 280px;
+          height: 180px;
         }
         h3{
-          margin: 1rem;
-          font-size: 1.5rem;
+          // margin: 1rem;
+          margin: 0.5rem;
+          // font-size: 1.5rem;
+          font-size: 1.1rem;
         }
       }  
     }
@@ -304,15 +329,53 @@ header {
 }
 #projets::before{
   @include backgroundBefore($orange, -2deg);
-  padding-bottom: 75px;
+  // padding-bottom: 75px;
   // left: 0;
-  height: 95%;
+  // height: 95%;
+  @media only screen and (min-width: 768px){
+    height: 90%;
+  }
+  @media only screen and (max-width: 768px){
+    height: 98%;
+  }
 }  
 
 #contact{
+  @media only screen and (max-width: 768px){
+    h2{
+      // margin: 2rem 0rem 4rem;  
+      margin: 2rem 0rem 3rem;
+    }
+    #button{
+      width: 90%;
+      margin: 1rem auto;
+    }
+    .g-recaptcha{
+      margin: 1rem auto;
+    }
+  }
+  @media only screen and (min-width: 768px){
+    .blocContact{
+      @include flex();
+        justify-content: space-around;
+    }
+    .form-bloc{
+      @include flex(row, space-between, center);
+    }
+    #button{
+      width: 15%;
+      margin: 0;
+    }
+    .g-recaptcha{
+      margin: 0;
+    }
+    h2{
+      margin: -1rem 0rem 4rem;
+    }
+  }
   h2{
       color: $blue;
-      margin: 2rem 0rem 4rem;  
+      // margin: 2rem 0rem 4rem;  
   }
   p{
     color: #fca67e;
@@ -343,12 +406,11 @@ header {
       height: 100px;
     }
     .form-bloc{
-      // @include flex(row, space-between, center);
       width: 90%;
       margin: 1rem auto;
     }
     .g-recaptcha{
-      margin: 1rem auto;
+      // margin: 1rem auto;
       // width: 90%;
       // transform:scale(0.65);
       // -webkit-transform:scale(0.65);
@@ -361,7 +423,6 @@ header {
     #button{
       background-color: $blue;
       color: $white;
-      width: 91%;
       border-radius: 5px;
     }
     #button:hover{
