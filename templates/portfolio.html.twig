@@ -53,12 +53,30 @@
   <h2>Projets</h2>
   <div class="listeProjets">
     {% for projet in projets %}
-      <a href="">
+      <div class="projet">
         <figure>
-          <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}">
-          <figcaption><h3>{{projet.intitule|capitalize }}</h3></figcaption>
+          <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+          <figcaption>
+            <h3>{{projet.intitule|capitalize }}</h3>
+            <div class="hideContent">
+              <div>{{projet.texte|u.truncate(150, '…', false)|raw}}</div>
+              {% if projet.lienGit is null or projet.lienWeb is null %}
+                <div class="liens single"> 
+              {% else %}
+                <div class="liens multiple"> 
+              {% endif %}
+                {% if projet.lienGit is not null %}
+                  <a href="{{projet.lienGit}}">Git</a>
+                {% endif %}
+                {# {{ dump(projet.lienWeb) }} #}
+                {% if projet.lienWeb is not null %}
+                  <a href="{{projet.lienWeb}}">Web</a>
+                {% endif %}
+              </div> 
+            </div>
+          </figcaption>
         </figure>
-      </a>
+      </div>
     {% endfor %}
   </div>
 </section>
