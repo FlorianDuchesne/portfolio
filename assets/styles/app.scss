@@ -304,7 +304,7 @@ header {
           // font-size: 1.5rem;
           font-size: 1.1rem;
           position: relative;
-          top: 225px;
+          top: 185px;
           transition-duration: 1s;
         }
         .hideContent{
@@ -315,12 +315,13 @@ header {
           position: relative;
           transition: ease-in-out 0.5s;
           transition-delay: 0s;
-          margin-top: 1rem;
+          margin-top: 1.5rem;
           div{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 200px;
+            font-size: 90%;
             // height: 165px;
             .liens{
               display: flex;
@@ -328,7 +329,8 @@ header {
               height: auto;
               width: 85%;
               margin: auto;
-              margin-bottom: 1.5rem;
+              // margin-bottom: 1.5rem;
+              margin-bottom: 3rem;
               &.multiple{
                 justify-content: space-between;
               }
@@ -361,7 +363,7 @@ header {
           margin-top: -22vh;
         }
         h3{
-          transform: translateY(-210px);
+          transform: translateY(-175px);
           transition-duration: 1s;
         }
         .hideContent{
@@ -393,6 +395,21 @@ header {
         h3{
           padding: 0.2rem 1rem 1rem;
           font-size: 1.3rem;
+          top: 225px;
+        }
+        .hideContent{
+          margin-top: 1rem;
+          div{
+            font-size: 100%;
+            .liens{
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+        &:hover{
+          h3{
+            transform: translateY(-210px);
+          }
         }
       }  
     }
