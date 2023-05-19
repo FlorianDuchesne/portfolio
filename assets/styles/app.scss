@@ -5,7 +5,6 @@ $darkblue:#19877c;
 $orange: #fca67e;
 $white: seashell;
 
-
 @mixin flex($direction : row, $justify : center, $align : center){
   display: flex;
   flex-direction: $direction;
@@ -332,7 +331,6 @@ header {
             justify-content: space-between;
             height: 200px;
             font-size: 90%;
-            // height: 165px;
             .liens{
               display: flex;
               flex-direction: row;
@@ -427,6 +425,8 @@ header {
   @include background();
   h2{
     color: $blue;
+    z-index: -1;
+    position: relative;
   }
   figure{
     text-align: center;
@@ -558,6 +558,7 @@ header {
   }
 }
 #cv{
+  z-index: -1;
   padding-top: 20px;
   @include background();
   height: 300px;
@@ -625,4 +626,98 @@ footer{
   transition: ease-in-out 0.5s;
 }
 
+.background{
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
+.hiddenProjet{
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+}
+
+.revealProjet{
+  z-index: 2;
+  background-color: $blue;
+  color: $white;
+  border-radius: 5px;
+  position: fixed;
+  width: 60vw;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80vh;
+  h3{
+    text-align: center;
+  }
+  i{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2rem;
+    color: $orange;
+  }
+  .images{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: last baseline;
+    .smallPics{
+      width: 20%;
+      img{
+        width: 95%;
+      }
+    }
+    img{
+      width: 80%;
+    }
+  }
+  .liens{
+    width: 75%;
+    margin: 1rem auto 1rem auto;
+  }
+  .texte{
+    overflow-y: scroll;
+    height: 20vh;
+    scrollbar-width: thin;
+    scrollbar-color: $blue $darkblue;
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    // mettre body à overflow: hidden pendant ce temps ?
+  }
+}
+
+.liens{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 85%;
+  margin: auto;
+  // margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  &.multiple{
+    justify-content: space-between;
+  }
+  &.single{
+    justify-content: center;
+  }
+  a{
+    color: $white;
+    border: solid 2px $white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: ease-in-out 0.3s;
+  }
+  a:hover{
+    background-color: $white;
+    color: $blue;
+  }
+}
