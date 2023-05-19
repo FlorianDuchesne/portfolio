@@ -7,7 +7,9 @@
 <header>
   <a><h1>Florian Duchesne</h1></a>
   <nav>
+  <div class="hamburgerBackground"></div>
     <i class="fa fa-solid fa-bars"></i>
+    <i class="fas fa-times hidden"></i>
     <ul>
       <li><a href="#apropos">A propos</a></li>
       <li><a href="#parcours">Parcours</a></li>
@@ -121,4 +123,5 @@
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('contact') }}
+      {{ encore_entry_script_tags('portfolio') }}
 		{% endblock %}
