@@ -54,7 +54,35 @@
 <section id="projets">
   <h2>Projets</h2>
   <div class="listeProjets">
+  <div id="backgroundSingleProjet"></div>
     {% for projet in projets %}
+
+    <div class="hiddenProjet">
+      <h3>{{projet.intitule|capitalize}}</h3>
+      <i class="fas fa-times"></i>
+      <div class="images">
+        <div class="smallPics">
+        {% for picture in projet.pictures %}
+          <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
+        {% endfor %}
+        </div>
+        <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+      </div>
+      {% if projet.lienGit is null or projet.lienWeb is null %}
+        <div class="liens single"> 
+      {% else %}
+        <div class="liens multiple"> 
+      {% endif %}
+      {% if projet.lienGit is not null %}
+        <a href="{{projet.lienGit}}">Git</a>
+      {% endif %}
+      {% if projet.lienWeb is not null %}
+        <a href="{{projet.lienWeb}}">Web</a>
+      {% endif %}
+      </div>
+      <div class="texte">{{projet.texte|raw}}</div>
+    </div>
+
       <div class="projet">
         <figure>
           <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
