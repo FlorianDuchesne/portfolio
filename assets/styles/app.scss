@@ -387,6 +387,7 @@ header {
       width: 85vw;
     }
     .projet{
+      cursor: pointer;
       margin: 3vw;
       figure{
         // width: 430px;
@@ -636,27 +637,43 @@ footer{
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.projetContainer{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .col1{
+    width: 50%;
+  }
+  .col2{
+    width: 50%;
+  }
+}
+
 .hiddenProjet{
   position: absolute;
   opacity: 0;
   z-index: -100;
+  // transition: ease-in-out 1s;
 }
 
 .revealProjet{
+  // transition: ease-in-out 1s;
   z-index: 2;
   background-color: $blue;
   color: $white;
   border-radius: 5px;
   position: fixed;
-  width: 60vw;
+  width: 70vw;
   top: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  height: 80vh;
+  max-height: 80vh;
   h3{
     text-align: center;
   }
-  i{
+  .fa-times{
+    cursor: pointer;
     display: block;
     position: absolute;
     right: 0;
@@ -665,36 +682,39 @@ footer{
     color: $orange;
   }
   .images{
-    width: 80%;
-    margin: auto;
+    // width: 80%;
+    // margin: auto;
     display: flex;
+    flex-direction: column-reverse;
     align-items: last baseline;
     .smallPics{
-      width: 20%;
+      display: flex;
       img{
-        width: 95%;
+        width: 30%;
+        padding: 1rem 1rem 0rem 0rem;
+        margin: initial;
       }
-    }
-    img{
-      width: 80%;
     }
   }
   .liens{
-    width: 75%;
-    margin: 1rem auto 1rem auto;
+    width: 50%;
+    margin: 3rem auto 3rem auto;
   }
   .texte{
-    overflow-y: scroll;
-    height: 20vh;
+    overflow-y: auto;
+    max-height: 50vh;
     scrollbar-width: thin;
     scrollbar-color: $blue $darkblue;
-    width: 80%;
+    // width: 80%;
     text-align: left;
     margin: auto;
+    padding: 0rem 2rem;
     // mettre body à overflow: hidden pendant ce temps ?
   }
 }
 
+
+// faire un mixin appelé ici et à l'autre endroit (rendondance de code !)
 .liens{
   display: flex;
   flex-direction: row;
@@ -715,6 +735,7 @@ footer{
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     transition: ease-in-out 0.3s;
+    font-size: x-large;
   }
   a:hover{
     background-color: $white;
