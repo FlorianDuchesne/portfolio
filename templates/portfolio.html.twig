@@ -57,33 +57,40 @@
   <div id="backgroundSingleProjet"></div>
     {% for projet in projets %}
 
-    <div class="hiddenProjet">
+    <div class="hiddenProjet" id="projetDetail{{projet.id}}">
       <h3>{{projet.intitule|capitalize}}</h3>
       <i class="fas fa-times"></i>
-      <div class="images">
-        <div class="smallPics">
-        {% for picture in projet.pictures %}
-          <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
-        {% endfor %}
+      <div class="projetContainer">
+        <div class="col1">
+          <div class="images">
+            {% if projet.pictures|length > 1 %}
+              <div class="smallPics">
+              {% for picture in projet.pictures %}
+                <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
+              {% endfor %}
+              </div>
+            {% endif %}
+            <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+          </div>
         </div>
-        <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+        <div class="col2">
+          <div class="texte">{{projet.texte|raw}}</div>
+        </div>
+        {% if projet.lienGit is null or projet.lienWeb is null %}
+          <div class="liens single"> 
+        {% else %}
+          <div class="liens multiple"> 
+        {% endif %}
+        {% if projet.lienGit is not null %}
+          <a href="{{projet.lienGit}}"><i class="fab fa-github"></i></a>
+        {% endif %}
+        {% if projet.lienWeb is not null %}
+          <a href="{{projet.lienWeb}}"><i class="fas fa-link"></i></a>
+        {% endif %}
+        </div>
       </div>
-      {% if projet.lienGit is null or projet.lienWeb is null %}
-        <div class="liens single"> 
-      {% else %}
-        <div class="liens multiple"> 
-      {% endif %}
-      {% if projet.lienGit is not null %}
-        <a href="{{projet.lienGit}}">Git</a>
-      {% endif %}
-      {% if projet.lienWeb is not null %}
-        <a href="{{projet.lienWeb}}">Web</a>
-      {% endif %}
-      </div>
-      <div class="texte">{{projet.texte|raw}}</div>
     </div>
-
-      <div class="projet">
+      <div class="projet" id="projetThumbnail{{projet.id}}">
         <figure>
           <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
           <figcaption>
@@ -96,11 +103,11 @@
                 <div class="liens multiple"> 
               {% endif %}
                 {% if projet.lienGit is not null %}
-                  <a href="{{projet.lienGit}}">Git</a>
+                  <a href="{{projet.lienGit}}"><i class="fab fa-github"></i></a>
                 {% endif %}
                 {# {{ dump(projet.lienWeb) }} #}
                 {% if projet.lienWeb is not null %}
-                  <a href="{{projet.lienWeb}}">Web</a>
+                  <a href="{{projet.lienWeb}}"><i class="fas fa-link"></i></a>
                 {% endif %}
               </div> 
             </div>
