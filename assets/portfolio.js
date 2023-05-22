@@ -20,8 +20,12 @@ function removeMenu(){
 
 function closeModal(projetToDisplay){
   document.body.style.overflow = "auto";
-  backGround.classList.remove('background');
-  projetToDisplay.classList.add("hiddenProjet");
+  backGround.classList.add('backgroundNone');
+  setTimeout(function() {
+    backGround.classList.remove('background');
+    backGround.classList.remove('backgroundNone');
+  }, 1000);
+  projetToDisplay.classList.remove("revealProjetIndex");  
   projetToDisplay.classList.remove("revealProjet");  
 }
 
@@ -34,8 +38,10 @@ projets.forEach(element => {
     let id = element.id.slice(15);
     let projetToDisplay = "#projetDetail" + id;
     projetToDisplay = document.querySelector(projetToDisplay);
-    projetToDisplay.classList.remove("hiddenProjet");
-    projetToDisplay.classList.add("revealProjet");
+    projetToDisplay.classList.add("revealProjetIndex");
+    setTimeout(function() {
+      projetToDisplay.classList.add('revealProjet');
+    }, 10);
     document.body.style.overflow = "hidden";
     let closeItem = projetToDisplay.querySelector('.fa-times');
     closeItem.addEventListener('click', function(event){
