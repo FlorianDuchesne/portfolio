@@ -1,0 +1,12 @@
+{% if projet.lienGit is null or projet.lienWeb is null %}
+<div class="liens single">
+{% else %}
+<div class="liens multiple">
+{% endif %}
+{% if projet.lienGit is not null %}
+<a href="{{projet.lienGit}}"><i class="fab fa-github"></i></a>
+{% endif %}
+{% if projet.lienWeb is not null %}
+<a href="{{projet.lienWeb}}"><i class="fas fa-link"></i></a>
+{% endif %}
+</div>

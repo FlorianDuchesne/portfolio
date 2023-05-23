@@ -76,18 +76,7 @@
         <div class="col2">
           <div class="texte">{{projet.texte|raw}}</div>
         </div>
-        {% if projet.lienGit is null or projet.lienWeb is null %}
-          <div class="liens single"> 
-        {% else %}
-          <div class="liens multiple"> 
-        {% endif %}
-        {% if projet.lienGit is not null %}
-          <a href="{{projet.lienGit}}"><i class="fab fa-github"></i></a>
-        {% endif %}
-        {% if projet.lienWeb is not null %}
-          <a href="{{projet.lienWeb}}"><i class="fas fa-link"></i></a>
-        {% endif %}
-        </div>
+        {% include '/elements/liens.html.twig' %}
       </div>
     </div>
       <div class="projet" id="projetThumbnail{{projet.id}}">
@@ -97,18 +86,7 @@
             <h3>{{projet.intitule|capitalize }}</h3>
             <div class="hideContent">
               <div>{{projet.texte|u.truncate(150, '…', false)|raw}}</div>
-              {% if projet.lienGit is null or projet.lienWeb is null %}
-                <div class="liens single"> 
-              {% else %}
-                <div class="liens multiple"> 
-              {% endif %}
-                {% if projet.lienGit is not null %}
-                  <a href="{{projet.lienGit}}"><i class="fab fa-github"></i></a>
-                {% endif %}
-                {% if projet.lienWeb is not null %}
-                  <a href="{{projet.lienWeb}}"><i class="fas fa-link"></i></a>
-                {% endif %}
-              </div> 
+              {% include '/elements/liens.html.twig' %}
             </div>
           </figcaption>
         </figure>
