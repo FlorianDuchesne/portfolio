@@ -470,7 +470,7 @@ header {
       // margin: 2rem 0rem 4rem;  
       margin: 2rem 0rem 3rem;
     }
-    #button{
+    #contact_submit{
       width: 90%;
       margin: 1rem auto;
     }
@@ -486,7 +486,7 @@ header {
     .form-bloc{
       @include flex(row, space-between, center);
     }
-    #button{
+    #contact_submit{
       width: 15%;
       margin: 0;
     }
@@ -513,7 +513,7 @@ header {
   }
   form{
     margin: 3rem auto;
-    input, textarea {
+    input, textarea, button {
       background-color:#e9e8e0;
       border: none;
       width: 90%;
@@ -526,7 +526,7 @@ header {
     input::placeholder{
       color: $blue;
     }
-    #message{
+    #contact_message{
       height: 100px;
     }
     .form-bloc{
@@ -538,12 +538,12 @@ header {
         margin: auto;
       }
     }
-    #button{
+    #contact_submit{
       background-color: $blue;
       color: $white;
       border-radius: 5px;
     }
-    #button:hover{
+    #contact_submit:hover{
       background-color: $darkblue;
     }
   }
