@@ -549,18 +549,25 @@ header {
   }
 }
 #cv{
-  z-index: -1;
   padding-top: 20px;
   @include background();
   height: 300px;
   color: $white;
   text-align: center;
+  p, a {
+    position: relative;
+  }
   p:nth-child(1){
     margin-top: 3rem;
   }
   i{
     color: $white;
     font-size: xxx-large;
+  }
+  #up{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
   }
 }
 #cv::before{

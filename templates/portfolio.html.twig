@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<header>
+<header id="header">
   <a><h1>Florian Duchesne</h1></a>
   <nav>
   <div class="hamburgerBackground"></div>
@@ -130,13 +130,14 @@
   <p>Téléchargez mon CV :</p>
   <a href="{{asset('/files/' ~ cv.fichier )}}"><i class="fa fa-arrow-circle-down"></i></a>
   <p>A bientôt ! : )</p>
+  <a href="#header" id="up"><i class="fas fa-chevron-up"></i></a>
 </section>
 <footer>
 <small>&#169; Florian Duchesne 2022</small>
 </footer>
 {% endblock %}
 
-		{% block javascripts %}
-			{{ encore_entry_script_tags('contact') }}
-      {{ encore_entry_script_tags('portfolio') }}
-		{% endblock %}
+{% block javascripts %}
+	{{ encore_entry_script_tags('contact') }}
+  {{ encore_entry_script_tags('portfolio') }}
+{% endblock %}
