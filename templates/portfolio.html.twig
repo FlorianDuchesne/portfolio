@@ -70,7 +70,7 @@
               {% endfor %}
               </div>
             {% endif %}
-            <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+            <img class="bigPic" src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
           </div>
         </div>
         <div class="col2">
@@ -107,21 +107,24 @@
     </div>
   </div>
   <p>ou bien écrivez-moi :</p>
-  			<form id="contact-form">
-				<div class="field">
-					<input type="text" name="from_name" class="fieldInput" placeholder="votre nom" id="from_name">
-				</div>
-        <div class="field">
-					<input type="text" name="user_email" class="fieldInput" placeholder="votre email" id="user_email">
-				</div>
-				<div class="field">
-					<textarea type="text" name="message" id="message" class="fieldInput" placeholder="votre message"></textarea>
-				</div>
-        <div class="form-bloc">
-          <div class="g-recaptcha" data-sitekey="6LexqPkhAAAAAGlznCL9c8dCP7kzXMPHAYlEt7Q9"></div>
-				  <input type="submit" id="button" value="Envoyer">
-        </div>
-			</form>
+  {{ form_start(form) }}
+  <div>
+    {{ form_errors(form) }}
+  </div>
+	<div class="field">
+    {{ form_widget(form.from_name) }}
+  </div>
+  <div class="field">
+    {{ form_widget(form.user_email) }}
+  </div>
+  <div class="field">
+    {{ form_widget(form.message) }}
+  </div>
+  <div class="form-bloc">
+    <div class="g-recaptcha" data-sitekey="6Ld33vkhAAAAAH50aoNV0qy3KmXlDf76IS6ln2ss"></div>
+    {{ form_widget(form.submit) }}
+  </div>
+  {{ form_rest(form) }}
 </section>
 <section id="cv">
   <p>Téléchargez mon CV :</p>
