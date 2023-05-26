@@ -19,6 +19,10 @@ function removeMenu(){
 }
 
 function closeModal(projetToDisplay){
+  if (projetToDisplay.querySelector('.smallPics') !== null){
+    let firstPic = projetToDisplay.querySelector('.smallPics').firstElementChild;
+    projetToDisplay.querySelector('.bigPic').src = firstPic.src;  
+  } 
   document.body.style.overflow = "auto";
   backGround.classList.add('backgroundNone');
   setTimeout(function() {
@@ -43,6 +47,15 @@ projets.forEach(element => {
       projetToDisplay.classList.add('revealProjet');
     }, 10);
     document.body.style.overflow = "hidden";
+
+    let smallPics = projetToDisplay.querySelectorAll('.smallPics img');
+    let bigPic = projetToDisplay.querySelector('.bigPic');
+    smallPics.forEach(element => {
+      element.addEventListener('click', function(event){
+        bigPic.src = element.src;
+      })
+    })
+
     let closeItem = projetToDisplay.querySelector('.fa-times');
     closeItem.addEventListener('click', function(event){
       closeModal(projetToDisplay);
@@ -52,3 +65,4 @@ projets.forEach(element => {
     }); 
   })
 });
+
