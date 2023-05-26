@@ -3,16 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\About;
-use App\Entity\ChroniqueJapon;
-use App\Entity\Competences;
+use App\Form\ContactType;
 use App\Entity\Curriculum;
+use App\Entity\Competences;
+use App\Entity\ChroniqueJapon;
 use App\Repository\AboutRepository;
-use App\Repository\ChroniqueJaponRepository;
-use App\Repository\CompetencesRepository;
-use App\Repository\CurriculumRepository;
-use App\Repository\ExperiencesRepository;
-use App\Repository\FormationsRepository;
 use App\Repository\ProjetRepository;
+use App\Repository\CurriculumRepository;
+use App\Repository\FormationsRepository;
+use App\Repository\CompetencesRepository;
+use App\Repository\ExperiencesRepository;
+use App\Repository\ChroniqueJaponRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -36,6 +37,7 @@ class BasicController extends AbstractController
         $exp = $expRepo->findAll();
         $formations = $formRepo->findAll();
         $projets = $projetRepo->findAll();
+        $form = $this->createForm(ContactType::class);
 
         return $this->render('/portfolio.html.twig', [
             'about' => $about,
@@ -43,7 +45,8 @@ class BasicController extends AbstractController
             'cv' => $cv,
             'experiences' => $exp,
             'formations' => $formations,
-            'projets' => $projets
+            'projets' => $projets,
+            'form' => $form->createView()
         ]);
     }
 
