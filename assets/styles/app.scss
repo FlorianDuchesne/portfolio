@@ -31,6 +31,34 @@ $white: seashell;
   filter: sepia(100%) hue-rotate(118deg) brightness($brightness) saturate($saturate);
 }
 
+@mixin liens(){
+  .liens{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+    &.multiple{
+      justify-content: space-between;
+    }
+    &.single{
+      justify-content: center;
+    }
+    a{
+      color: $white;
+      border: solid 2px $white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      transition: ease-in-out 0.3s;
+    }
+    a:hover{
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}
+
 html{
   scroll-behavior:smooth;
 }
@@ -290,27 +318,22 @@ header {
       justify-content: flex-start;
     }
     .projet{
-      // margin: 3rem 4rem;
       margin: 3vw;
       figure{
         width: 25vw;
-        // height: 260px;
         height: 235px;
         position: relative;
         margin: auto;
         transition: ease-in-out 1s;
         img{
           width:  100%;
-          // height: 280px;
           height: 180px;
           position: absolute;
           left: 0;
           top: 0;
         }
         h3{
-          // margin: 1rem;
           margin: 0.5rem;
-          // font-size: 1.5rem;
           font-size: 1.1rem;
           position: relative;
           top: 185px;
@@ -331,32 +354,7 @@ header {
             justify-content: space-between;
             height: 200px;
             font-size: 90%;
-            .liens{
-              display: flex;
-              flex-direction: row;
-              height: auto;
-              width: 85%;
-              margin: auto;
-              // margin-bottom: 1.5rem;
-              margin-bottom: 3rem;
-              &.multiple{
-                justify-content: space-between;
-              }
-              &.single{
-                justify-content: center;
-              }
-              a{
-                color: $white;
-                border: solid 2px $white;
-                padding: 0.5rem 1.5rem;
-                border-radius: 30px;
-                transition: ease-in-out 0.3s;
-              }
-              a:hover{
-                background-color: $white;
-                color: $blue;
-              }
-            }
+            @include liens();
           }
         }
       }
@@ -427,19 +425,12 @@ header {
   }
   figure{
     text-align: center;
-    // width:  750px;
-    // height: 550px;
     background-color: $blue;
-    // position: relative;
     border-radius: 15px;
     overflow: hidden;
-    // margin: 10rem auto;
     margin-bottom: 3rem;
     img{
-      // width:  750px;
-      // height: 400px;
       object-fit: cover;  
-      // @include filter(100%, 100%);
       filter: brightness(90%);
       transition: 0.5s ease-in-out;
     }
@@ -453,9 +444,6 @@ header {
 }
 #projets::before{
   @include backgroundBefore($orange, -2deg);
-  // padding-bottom: 75px;
-  // left: 0;
-  // height: 95%;
   @media only screen and (min-width: 768px){
     height: 90%;
   }
@@ -467,7 +455,6 @@ header {
 #contact{
   @media only screen and (max-width: 768px){
     h2{
-      // margin: 2rem 0rem 4rem;  
       margin: 2rem 0rem 3rem;
     }
     #contact_submit{
@@ -649,6 +636,9 @@ footer{
   .col2{
     width: 50%;
   }
+  .liens a{
+      font-size: x-large;
+  }
 }
 
 .hiddenProjet{
@@ -663,8 +653,7 @@ footer{
   top: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  max-height: 80vh;
-  // transition: ease-in-out 1s;
+  max-height: 85vh;
 }
 .revealProjetIndex{
   z-index: 2;
@@ -686,18 +675,9 @@ footer{
     color: $orange;
   }
   .images{
-    // width: 80%;
-    // margin: auto;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: last baseline;
     .smallPics{
       display: flex;
-      img{
-        width: 30%;
-        padding: 1rem 1rem 0rem 0rem;
-        margin: initial;
-      }
     }
   }
   .liens{
@@ -706,7 +686,7 @@ footer{
   }
   .texte{
     overflow-y: auto;
-    max-height: 50vh;
+    max-height: 45vh;
     scrollbar-width: thin;
     scrollbar-color: $blue $darkblue;
     &::-webkit-scrollbar{
@@ -719,40 +699,47 @@ footer{
       background: $blue;
       border-radius: 20px;
     }
-    // width: 80%;
     text-align: left;
     margin: auto;
     padding: 0rem 2rem;
-    // mettre body à overflow: hidden pendant ce temps ?
+  }
+  @media only screen and (min-width: 768px){
+    .images{
+      flex-direction: column-reverse;
+      align-items: last baseline;
+      .smallPics{
+        img{
+          width: 30%;
+          padding: 1rem 1rem 0rem 0rem;
+          margin: initial;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px){
+    .projetContainer{
+      flex-direction: row;
+      .col1{
+        width: auto;
+      }
+      .images{
+        flex-direction: row;
+        align-items: end;
+        .smallPics{
+          flex-direction: column;
+          width: 30%;
+          img{
+            width: 100%;
+            padding: 0.3rem 0.3rem 0rem 0rem;
+          }
+        }
+      }    
+    }
   }
 }
 
-
-// faire un mixin appelé ici et à l'autre endroit (rendondance de code !)
-.liens{
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  width: 85%;
-  margin: auto;
-  // margin-bottom: 1.5rem;
-  margin-bottom: 3rem;
-  &.multiple{
-    justify-content: space-between;
-  }
-  &.single{
-    justify-content: center;
-  }
-  a{
-    color: $white;
-    border: solid 2px $white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 30px;
-    transition: ease-in-out 0.3s;
-    font-size: x-large;
-  }
-  a:hover{
-    background-color: $white;
-    color: $blue;
-  }
+@include liens();
+.liens a{
+  font-size: large;
 }
+
