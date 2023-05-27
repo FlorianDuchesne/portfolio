@@ -1,0 +1,137 @@
+.projetContainer{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .col1{
+    width: 50%;
+  }
+}
+
+.hiddenProjet{
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+  background-color: $blue;
+  color: $white;
+  border-radius: 5px;
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 85vh;
+}
+.revealProjetIndex{
+  z-index: 2;
+}
+.revealProjet{
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 0.3s;
+  h3{
+    text-align: center;
+  }
+  .fa-times{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $orange;
+  }
+  .images{
+    display: flex;
+    .smallPics{
+      display: flex;
+    }
+  }
+  .texte{
+    overflow-y: auto;
+    max-height: 45vh;
+    scrollbar-width: thin;
+    scrollbar-color: $blue $darkblue;
+    &::-webkit-scrollbar{
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: $darkblue;
+    }
+    &::-webkit-scrollbar-track {
+      background: $blue;
+      border-radius: 20px;
+    }
+    text-align: left;
+    margin: auto;
+  }
+  @media only screen and (min-width: 768px){
+  width: 70vw;
+  .projetContainer{
+    .col2{
+      width: 50%;
+    }
+  }
+    .fa-times{
+      margin: 2rem;
+    }
+    .images{
+      flex-direction: column-reverse;
+      align-items: last baseline;
+      .smallPics{
+        img{
+          width: 30%;
+          padding: 1rem 1rem 0rem 0rem;
+          margin: initial;
+        }
+      }
+    }
+    .texte{
+      padding: 0rem 2rem;
+    }
+    .liens{
+      width: 50%;
+      margin: 3rem auto 3rem auto;
+      a{
+        font-size: x-large;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px){
+    width: 85vw;
+    .fa-times{
+      margin: 10px;
+      font-size: larger;
+    }
+    .projetContainer{
+      flex-direction: row;
+      .col1{
+        width: auto;
+      }
+      .col2{
+        width: 100%;
+        font-size: smaller;
+        padding: 0.5rem 0rem;
+      }
+      .images{
+        flex-direction: row;
+        align-items: end;
+        .smallPics{
+          flex-direction: column;
+          width: 30%;
+          img{
+            width: 100%;
+            padding: 0.3rem 0.3rem 0rem 0rem;
+          }
+        }
+      }    
+      .texte{
+        padding: 0rem 0.5rem;
+      }
+      .liens{
+        width: 100%;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+

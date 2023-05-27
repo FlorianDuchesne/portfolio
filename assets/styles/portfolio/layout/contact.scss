@@ -1,0 +1,83 @@
+#contact{
+  @media only screen and (max-width: 768px){
+    h2{
+      margin: 2rem 0rem 3rem;
+    }
+    #contact_submit{
+      width: 90%;
+      margin: 1rem auto;
+    }
+    .g-recaptcha{
+      margin: 1rem auto;
+    }
+  }
+  @media only screen and (min-width: 768px){
+    .blocContact{
+      @include flex();
+        justify-content: space-around;
+    }
+    .form-bloc{
+      @include flex(row, space-between, center);
+    }
+    #contact_submit{
+      width: 15%;
+      margin: 0;
+    }
+    .g-recaptcha{
+      margin: 0;
+    }
+    h2{
+      margin: -1rem 0rem 4rem;
+    }
+  }
+  h2{
+      color: $blue;
+      // margin: 2rem 0rem 4rem;  
+  }
+  p{
+    color: #fca67e;
+    margin: auto;
+    text-align: center;
+  }
+  img{
+    width: 100px;
+    margin: 3rem auto;
+    display: block;
+  }
+  form{
+    margin: 3rem auto;
+    input, textarea, button {
+      background-color:#e9e8e0;
+      border: none;
+      width: 90%;
+      margin: 1rem auto;
+      display: block;
+      color: $blue;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    input::placeholder{
+      color: $blue;
+    }
+    #contact_message{
+      height: 100px;
+    }
+    .form-bloc{
+      width: 90%;
+      margin: 1rem auto;
+    }
+    .g-recaptcha{
+      div{
+        margin: auto;
+      }
+    }
+    #contact_submit{
+      background-color: $blue;
+      color: $white;
+      border-radius: 5px;
+    }
+    #contact_submit:hover{
+      background-color: $darkblue;
+    }
+  }
+}

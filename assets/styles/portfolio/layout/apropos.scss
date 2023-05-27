@@ -1,0 +1,73 @@
+#apropos{
+  @media only screen and (min-width: 768px){
+    padding-top: 35px;
+    h2{
+      margin: 4rem 0rem 2rem;
+    }  
+  }
+  @media only screen and (max-width: 768px){
+    padding-top: 35px;
+    h2{
+      margin: 3rem 0rem 2rem;
+    }  
+  }
+  @include background();
+  h2{
+    color: $orange;
+  }
+  strong{
+    color: $orange;
+  }
+  a{
+    text-decoration: none;
+    color: $orange;
+    font-weight: bold;
+  }
+  #apropos_bloc{
+    @include flex(column-reverse, center, center);
+    @media only screen and (min-width: 768px){
+      width: 90vw;
+      flex-direction: row;
+    }
+    flex-direction: column-reverse;
+    img{
+      @media only screen and (min-width: 768px){
+        height: 400px;
+        width: auto;
+        position: relative;
+        // top: -110px;
+        top: -85px;
+      }
+      width: 40vw;
+      margin:auto;
+      // margin-bottom: 4rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      @include filter(170%, 100%);
+      transition: ease-in-out 0.5s;
+      &:hover{
+        filter: none;
+      }
+    }
+  }
+  #apropos_contenu {
+    @media only screen and (min-width: 768px){
+      padding: 2rem 0rem;
+      margin: 0rem 5rem auto 6rem;
+    }
+    color: $white;  
+    margin: 0rem 2rem;
+    text-align: start;
+    div{
+      margin: 1rem 0rem;
+    }
+  }
+
+}
+#apropos::before{
+  @include backgroundBefore($blue, 2deg);
+  margin-top: 10px;
+  @media only screen and (min-width: 768px){
+    height: 85%;
+  }
+}

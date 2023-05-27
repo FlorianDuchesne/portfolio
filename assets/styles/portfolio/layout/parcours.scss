@@ -1,0 +1,47 @@
+#parcours{
+  @media only screen and (max-width: 768px){
+    margin: 2rem;
+    h2{
+      margin: 3rem 0rem 3rem;
+    }
+  }
+  @media only screen and (min-width: 768px){
+    margin: 2rem 6rem;
+    padding-bottom: 3rem;
+    h2{
+      // margin: 2rem 0rem 0rem;
+      margin: -2rem 0rem 0rem;
+    }
+    h3{
+      margin: 2rem 0rem;
+    }
+    p{
+      margin: 0.5rem 0rem;
+    }
+  }
+  margin-top: -2rem;
+  h2{
+    color: $orange;
+  }
+  h3{
+    color: $blue;
+  }
+  p{
+    text-align: start;
+    color: $blue;
+    em {
+      color: $orange;
+    }
+  }
+  p::before{
+    content:"# ";
+    color: $orange;
+  }
+  #competences::before{
+    content:"";
+  }
+  span::before{
+    content:"#";
+    color: $orange;
+  }
+}

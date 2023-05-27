@@ -1,0 +1,53 @@
+@mixin flex($direction : row, $justify : center, $align : center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+}
+
+@mixin background(){
+  position: relative;
+  overflow: hidden;
+}
+@mixin backgroundBefore($color, $rotate){
+  content: '';
+  background-color: $color;
+  transform: rotate($rotate) scale(1);
+  position: absolute;
+  left: -100px;
+  width: 150%;
+  height: 96%;
+  z-index: -1;
+  margin-top: 25px;
+}
+@mixin filter($brightness, $saturate){
+  filter: sepia(100%) hue-rotate(118deg) brightness($brightness) saturate($saturate);
+}
+
+@mixin liens(){
+  .liens{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+    &.multiple{
+      justify-content: space-between;
+    }
+    &.single{
+      justify-content: center;
+    }
+    a{
+      color: $white;
+      border: solid 2px $white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      transition: ease-in-out 0.3s;
+    }
+    a:hover{
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}

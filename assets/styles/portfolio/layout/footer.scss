@@ -1,0 +1,34 @@
+#cv{
+  padding-top: 20px;
+  @include background();
+  height: 300px;
+  color: $white;
+  text-align: center;
+  p, a {
+    position: relative;
+  }
+  p:nth-child(1){
+    margin-top: 3rem;
+  }
+  i{
+    color: $white;
+    font-size: xxx-large;
+  }
+  #up{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+  }
+}
+#cv::before{
+  @include backgroundBefore($blue, 2deg);
+  height: 71%;
+}  
+footer{
+  color: $orange;
+  text-align: center;
+  margin: 0.5rem;
+  small{
+    font-size: revert;
+  }
+}
