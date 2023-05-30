@@ -47,7 +47,7 @@
   }
   .texte{
     overflow-y: auto;
-    max-height: 45vh;
+    max-height: 40vh;
     scrollbar-width: thin;
     scrollbar-color: $blue $darkblue;
     &::-webkit-scrollbar{
