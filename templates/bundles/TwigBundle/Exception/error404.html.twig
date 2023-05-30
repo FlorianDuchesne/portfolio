@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+			{{ encore_entry_link_tags('home') }}
+		{% endblock %}
+
+{% block body %}
+    <h1>Erreur 404</h1>
+
+    <p>
+    La page recherchée n'a pas été trouvée, désolé ! : /
+    </p>
+    <p><a href="{{ path('accueil') }}">Retour à l'accueil</a></p>
+
+{% endblock %}
