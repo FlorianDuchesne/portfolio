@@ -20,11 +20,13 @@
         "symfony/framework-bundle": "*",
         "symfony/proxy-manager-bridge": "^5.4",
         "symfony/requirements-checker": "^2.0",
+        "symfony/twig-bundle": "^5.4",
         "symfony/validator": "*",
         "symfony/webpack-encore-bundle": "^1.15",
         "symfony/yaml": "*",
         "twig/extra-bundle": "^3.6",
         "twig/string-extra": "^3.6",
+        "twig/twig": "^2.12|^3.0",
         "vich/uploader-bundle": "^1.23"
     },
     "require-dev": {
