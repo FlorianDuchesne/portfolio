@@ -1,4 +1,7 @@
 {% extends "base.html.twig" %}
+{% block title %}Super Fantôme{% endblock %}
+{% block meta_description %} 'Super Fantôme contre le Docteur Krapougnat' est un récit dont on est le héros illustré. {% endblock %}
+{% block icon %} <link rel="icon" href= {{ asset('/icones/icone_superFantome.png') }}>	{% endblock %}
     {% block stylesheets %}
       {{ encore_entry_link_tags('superFantome_lecture') }}
 		{% endblock %}
