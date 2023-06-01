@@ -3,7 +3,6 @@
 {% block title %}Portfolio Florian Duchesne{% endblock %}
 
 {% block body %}
-
 <header id="header">
   <a><h1>Florian Duchesne</h1></a>
   <nav>
@@ -76,6 +75,15 @@
         <div class="col2">
           <div class="texte">{{projet.texte|raw}}</div>
         </div>
+        <p>Compétences employées sur le projet : 
+        {% for competence in projet.competences %}
+          <span>{{competence.intitule}}
+            {% if competence != loop.last %}
+              ,
+            {% endif %}
+          </span>
+        {% endfor %}
+        </p>
         {% include '/elements/liens.html.twig' %}
       </div>
     </div>
@@ -99,11 +107,11 @@
   <div class="blocContact">
     <div>
       <p>retrouvez-moi sur Github :</p>
-      <a href=""><img src="{{asset('/logos/GitHub-Mark-120px-plus.png')}}" alt="logo github"></a>
+      <a href="https://github.com/FlorianDuchesne/" target="_blank"><img src="{{asset('/logos/GitHub-Mark-120px-plus.png')}}" alt="logo github"></a>
     </div>
     <div>
       <p> ou sur LinkedIn :</p>
-      <a href=""><img src="{{asset('/logos/LI-In-Bug.png')}}" alt="logo linkedIn"></a>
+      <a href="https://www.linkedin.com/in/florian-duchesne/" target="_blank"><img src="{{asset('/logos/LI-In-Bug.png')}}" alt="logo linkedIn"></a>
     </div>
   </div>
   <p>ou bien écrivez-moi :</p>
