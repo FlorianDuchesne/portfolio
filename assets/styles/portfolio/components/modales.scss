@@ -50,6 +50,15 @@
     display: flex;
     .smallPics{
       display: flex;
+      div{
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
     }
   }
   .texte{
@@ -83,10 +92,13 @@
       flex-direction: column-reverse;
       align-items: last baseline;
       .smallPics{
-        img{
-          width: 30%;
-          padding: 1rem 1rem 0rem 0rem;
-          margin: initial;
+        div{
+          margin-right: 10px;
+          height: 65px;
+          img{
+            padding: 1rem 1rem 0rem 0rem;
+            margin: initial;
+          }  
         }
       }
     }
@@ -130,7 +142,7 @@
           }
         }
         .bigPic{
-          width: 70%;
+          width: 80%;
         }
       }    
       .texte{

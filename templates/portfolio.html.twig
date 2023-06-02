@@ -65,7 +65,9 @@
             {% if projet.pictures|length > 1 %}
               <div class="smallPics">
               {% for picture in projet.pictures %}
-                <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
+                <div>
+                  <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
+                </div>
               {% endfor %}
               </div>
               <img class="bigPic" src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
