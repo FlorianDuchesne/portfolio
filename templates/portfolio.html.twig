@@ -73,17 +73,18 @@
           </div>
         </div>
         <div class="col2">
-          <div class="texte">{{projet.texte|raw}}</div>
+          <div class="texte">{{projet.texte|raw}}
+            <p><strong>Compétences employées sur le projet : </strong>
+              {% for competence in projet.competences %}
+                  <span>{{competence.intitule}}
+                  {% if competence != loop.last %}
+                    &thinsp;,&nbsp;
+                  {% endif %}
+                </span>
+              {% endfor %}
+            </p>
+          </div>
         </div>
-        <p>Compétences employées sur le projet : 
-        {% for competence in projet.competences %}
-          <span>{{competence.intitule}}
-            {% if competence != loop.last %}
-              ,
-            {% endif %}
-          </span>
-        {% endfor %}
-        </p>
         {% include '/elements/liens.html.twig' %}
       </div>
     </div>
