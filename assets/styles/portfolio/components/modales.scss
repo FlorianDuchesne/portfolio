@@ -54,7 +54,6 @@
   }
   .texte{
     overflow-y: auto;
-    max-height: 40vh;
     scrollbar-width: thin;
     scrollbar-color: $blue $darkblue;
     &::-webkit-scrollbar{
@@ -93,6 +92,7 @@
     }
     .texte{
       padding: 0rem 2rem;
+      max-height: 40vh;
     }
     .liens{
       width: 50%;
@@ -132,6 +132,7 @@
       }    
       .texte{
         padding: 0rem 0.5rem;
+        max-height: 30vh;
       }
       .liens{
         width: 100%;
