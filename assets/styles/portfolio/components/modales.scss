@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   .col1{
     width: 50%;
+    margin: auto;
   }
   span{
     color: $orange;
@@ -48,6 +49,19 @@
   }
   .images{
     display: flex;
+    .swiper{
+      width: 100%;
+      height: 300px;
+      .swiper-pagination-bullet::before{
+        content: none;
+      }  
+      .swiper-pagination-bullet-active{
+        background: $orange;
+      }
+      .swiper-button-prev, .swiper-button-next{
+        color : $orange;
+      }  
+    }
     .smallPics{
       display: flex;
       div{
@@ -91,6 +105,10 @@
     .images{
       flex-direction: column-reverse;
       align-items: last baseline;
+      .swiper{
+        width: 100%;
+        height: 300px;
+      }  
       .smallPics{
         div{
           margin-right: 10px;
@@ -133,6 +151,10 @@
       .images{
         flex-direction: row;
         align-items: end;
+        .swiper{
+          height: 175px;
+          width: 75vw;
+        }    
         .smallPics{
           flex-direction: column;
           width: 30%;
