@@ -67,7 +67,7 @@
               <div class="swiper-wrapper">
               {% for picture in projet.pictures %}
                 <div class="swiper-slide">
-                  <img src="{{asset('/files/' ~ picture)}}" alt="{{projet.intitule}}"/>
+                  <img src="{{asset('/files/' ~ picture)|imagine_filter('my_ratio_down_scale_filter')}}" alt="{{projet.intitule}}"/>
                 </div>
               {% endfor %}
               </div>
@@ -78,7 +78,7 @@
               <div class="swiper-button-next"></div>
             </div>
             {% else %}
-              <img class="onlyPic" src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+              <img class="onlyPic" src="{{asset('/files/' ~ projet.pictures[0])|imagine_filter('my_ratio_down_scale_filter')}}" alt="{{projet.intitule}}"/>
             {% endif %}
           </div>
         </div>
@@ -100,7 +100,7 @@
     </div>
       <div class="projet" id="projetThumbnail{{projet.id}}">
         <figure>
-          <img src="{{asset('/files/' ~ projet.pictures[0])}}" alt="{{projet.intitule}}"/>
+          <img src="{{asset('/files/' ~ projet.pictures[0])|imagine_filter('my_thumb') }}" alt="{{projet.intitule}}" />
           <figcaption>
             <h3>{{projet.intitule|capitalize }}</h3>
             <div class="hideContent">
