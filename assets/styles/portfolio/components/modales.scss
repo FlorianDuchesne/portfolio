@@ -51,7 +51,7 @@
     display: flex;
     .swiper{
       width: 100%;
-      height: 300px;
+      height: auto;
       .swiper-pagination-bullet::before{
         content: none;
       }  
@@ -107,7 +107,7 @@
       align-items: last baseline;
       .swiper{
         width: 100%;
-        height: 300px;
+        height: auto;
       }  
       .smallPics{
         div{
@@ -152,7 +152,7 @@
         flex-direction: row;
         align-items: end;
         .swiper{
-          height: 175px;
+          height: auto;
           width: 75vw;
         }    
         .smallPics{
