@@ -36,3 +36,12 @@ liip_imagine:
 
                     # given 1920x1600px -> output 960x800px (relative down-scale)
                     to: 0.5
+
+        photo_apropos:
+            filters:
+
+                # use and setup the "scale" filter
+                scale:
+
+                    # given 1920x1600px -> output 960x800px (relative down-scale)
+                    to: 0.2
