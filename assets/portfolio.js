@@ -1,3 +1,27 @@
+////////LOADER/////////////
+
+// Attendez que le document soit complètement chargé
+document.addEventListener("DOMContentLoaded", function() {
+
+  if (document.readyState === "complete") {
+    // Le chargement est instantané, masquez le loader immédiatement
+    hideLoader();
+  } else {
+    // Le chargement n'est pas instantané, attachez un gestionnaire d'événements pour masquer le loader une fois que tout est chargé
+    document.body.classList.add("loading");
+    window.addEventListener("load", hideLoader);
+  }
+});
+
+function hideLoader() {
+  // Masquez le loader
+  document.getElementById("loader").style.display = "none";
+  document.body.classList.remove("loading");
+  // Affichez le contenu de la page
+  document.getElementById("content").style.display = "block";
+}
+////////LOADER/////////////
+
 import '/node_modules/swiper/swiper-bundle.min.js';
 
 const swiper = new Swiper('.swiper', {
