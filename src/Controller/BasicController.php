@@ -22,7 +22,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class BasicController extends AbstractController
 {
     /**
-     * @Route("/portfolio/", name="app_basic")
+     * @Route("/portfolio/", name="portfolio")
      */
     public function index(AboutRepository $aboutRepo, 
     CompetencesRepository $compRepo, 
