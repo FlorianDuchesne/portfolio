@@ -2,109 +2,108 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
-        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-50bcc0.js",
-        "/build/app.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/198.715c4c92.js",
+        "/build/875.6b6ba30b.js",
+        "/build/app.ddc8c749.js"
       ],
       "css": [
-        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ar-50bcc0.css",
-        "/build/app.css"
+        "/build/875.041b1dea.css",
+        "/build/app.e53dd40a.css"
       ]
     },
     "home": {
       "js": [
-        "/build/runtime.js",
-        "/build/home.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/home.13e7b317.js"
       ],
       "css": [
-        "/build/home.css"
+        "/build/home.b4c592af.css"
       ]
     },
     "superFantome": {
       "js": [
-        "/build/runtime.js",
-        "/build/superFantome.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/superFantome.4dd9d653.js"
       ],
       "css": [
-        "/build/superFantome.css"
+        "/build/superFantome.746545d1.css"
       ]
     },
     "superFantome_lecture": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
-        "/build/superFantome_lecture.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/198.715c4c92.js",
+        "/build/superFantome_lecture.13c26944.js"
       ],
       "css": [
-        "/build/superFantome_lecture.css"
+        "/build/superFantome_lecture.f472a692.css"
       ]
     },
     "japon": {
       "js": [
-        "/build/runtime.js",
-        "/build/japon.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/japon.35056aea.js"
       ],
       "css": [
-        "/build/japon.css"
+        "/build/japon.cd81dab8.css"
       ]
     },
     "japon_lecture": {
       "js": [
-        "/build/runtime.js",
-        "/build/japon_lecture.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/japon_lecture.3a1db681.js"
       ],
       "css": [
-        "/build/japon_lecture.css"
+        "/build/japon_lecture.e4749aca.css"
       ]
     },
     "japon_liens": {
       "js": [
-        "/build/runtime.js",
-        "/build/japon_liens.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/japon_liens.57022b14.js"
       ],
       "css": [
-        "/build/japon_liens.css"
+        "/build/japon_liens.3705bdf1.css"
       ]
     },
     "japon_apropos": {
       "js": [
-        "/build/runtime.js",
-        "/build/japon_apropos.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/japon_apropos.375ddd44.js"
       ],
       "css": [
-        "/build/japon_apropos.css"
+        "/build/japon_apropos.50bcb657.css"
       ]
     },
     "japon_contact": {
       "js": [
-        "/build/runtime.js",
-        "/build/japon_contact.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/japon_contact.d287c277.js"
       ],
       "css": [
-        "/build/japon_contact.css"
+        "/build/japon_contact.c3996818.css"
       ]
     },
     "contact": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
-        "/build/contact.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/198.715c4c92.js",
+        "/build/contact.c5236503.js"
       ]
     },
     "portfolio": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--711a0d.js",
-        "/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-6036ed.js",
-        "/build/portfolio.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/198.715c4c92.js",
+        "/build/709.9952afec.js",
+        "/build/portfolio.7966bc7f.js"
       ]
     },
     "admin": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors-node_modules_iframe-resizer_js_iframeResizer_min_js.js",
-        "/build/admin.js"
+        "/build/runtime.9a71ee5d.js",
+        "/build/admin.888a674c.js"
       ]
     }
   }

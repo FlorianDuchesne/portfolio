@@ -161,6 +161,7 @@
 {% endblock %}
 
 {% block javascripts %}
+  {{ parent() }}
 	{{ encore_entry_script_tags('contact') }}
   {{ encore_entry_script_tags('portfolio') }}
 {% endblock %}
