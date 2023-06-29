@@ -6,6 +6,7 @@
       {{ encore_entry_link_tags('superFantome_lecture') }}
 		{% endblock %}
     {% block javascripts %}
+      {{ parent() }}
       {{ encore_entry_script_tags('superFantome_lecture') }}
     {% endblock %}
   {% block body %}
