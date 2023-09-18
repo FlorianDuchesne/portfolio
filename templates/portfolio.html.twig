@@ -104,8 +104,8 @@
         <figure>
           <img src="{{asset('/files/webp/thumb/' ~ projet.pictures[0] ~ '.webp')}}" alt="{{projet.intitule}}" />
           <figcaption>
-            <h3>{{projet.intitule|capitalize }}</h3>
             <div class="hideContent">
+              <h3>{{projet.intitule|capitalize }}</h3>
               <div>{{projet.texte|u.truncate(150, '…', false)|raw}}</div>
               {% include '/elements/liens.html.twig' %}
             </div>
