@@ -22,3 +22,7 @@ dumpDatabase2.sql
 .gitignore
 dumpDatabase.sql
 www/files/*
+
+###> liip/imagine-bundle ###
+/./www/media/cache/
+###< liip/imagine-bundle ###
